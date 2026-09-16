@@ -26,8 +26,51 @@ the documents prove the thinking did.
 
 ## Progress
 
-Build log lives in `deliverables/build-log.md` — every change with its date,
-reason, and the requirement it traces to.
+**In progress — Week 4 opened.** The latest reviewed session is dated
+7 September 2026. This is a snapshot of documented simulation work,
+not a live verification of the Salesforce org.
+
+Recorded outcomes include:
+
+- CF-02: all six simulated address confirmations completed.
+- CF-20: ten potential duplicate pairs assessed; seven recorded as
+  separate households and three as the same household. Assessment
+  completion does not mean the proposed account merges were executed.
+- CF-13: a partial Contact merge reduced the recorded count from
+  137 to 98; 21 groups remained on hold.
+- CF-04: 666 Opportunities moved into interim custodianship.
+- CF-23: an ownership sweep recorded 185 of 187 checked objects
+  as clear, with two unqueryable.
+- CF-07: the administrator recorded the Monday duplicate-queue
+  check as an interim control; permanent handover remained blocked.
+
+Week 4 covers campaign attribution, lead capture and lead management.
+Its brief records 150 seeded leads as uncontacted. These are planned
+work areas, not completed deliverables.
+
+Remaining work includes the CF-26 list-view filtering and scope defect,
+licence-dependent access, held merge decisions, role hierarchy and
+default-owner configuration, and unfinished SOP sections.
+
+## Start with the evidence
+
+| Area | Record |
+| --- | --- |
+| Latest reviewed session | [7 September session](deliverables/sessions/2026-09-07.md) |
+| Decisions and outstanding work | [Carry-forward ticket register](deliverables/carry-forward-tickets.md) |
+| Data quality | [Data-quality audit](deliverables/ticket-2.1-data-quality-audit.md) |
+| Duplicate controls | [Duplicate-management design](deliverables/ticket-2.2-duplicate-management-design.md) |
+| Pipeline reporting | [Pipeline-hygiene report](deliverables/ticket-2.3-pipeline-hygiene-report.md) |
+| Ownership verification | [Ownership sweep](evidence/week-03/cf-23-ownership-sweep-03-09.md) |
+| Week 4 scope | [Week 4 build brief](deliverables/week-04-build-brief.md) |
+
+The [build log](deliverables/build-log.md) records earlier changes and
+reasoning. Historical entries retain their original context; consult
+dated updates in the ticket register and session notes before treating
+an older outstanding item as current.
+
+All figures describe the fictional training org. They are not client
+results, revenue generated or independently verified business outcomes.
 
 ---
 
