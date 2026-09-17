@@ -1,5 +1,16 @@
 # Carry-forward tickets — Weeks 1 and 2
 
+## Update 17/09/2026 — CF-26 list-view fix
+
+CF-26 fixed in the org and verified as administrator.
+Owner scope changed to All tasks; Subject contains
+"Confirm service address". The view now returns six matching
+tasks, all Completed, instead of 26 mixed tasks.
+Existing sharing remains All users.
+
+Metadata retrieved. Other-user record access remains untested.
+See [verification details](cf-26-list-view-verification.md).
+
 **Raised 27/08/2026 · Before Week 3 opens · Org `sunrise`**
 
 Everything below was verified against the org today, not copied forward from notes.
