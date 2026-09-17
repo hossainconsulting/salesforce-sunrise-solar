@@ -1,5 +1,19 @@
 # Carry-forward tickets — Weeks 1 and 2
 
+## Update 18/09/2026 — CF-08 provisioning SOP completed
+
+Completed the explanations in sections 1, 3 and 4 of the
+[user-provisioning SOP](sop-user-provisioning.md), restoring v1.0.
+
+The additions explain licence checks before provisioning, Campaign
+access checks, and deliberate access selection with verification
+before handover. Section 4 uses Ben's documented provisioning
+experience; the attribution to Sarah was not substantiated in
+the notes reviewed.
+
+CF-08 is complete. No Salesforce configuration was changed.
+
+
 ## Update 17/09/2026 — CF-12 role assignments
 
 CF-12 resolved for Jack Nguyen and Mia Kelly.

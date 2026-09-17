@@ -1,29 +1,23 @@
 # SOP — User provisioning & deactivation
 
-**SunRise Solar · Owner: Hemayet Hossain · v0.9 (DRAFT — not yet issuable) — 26/08/2026**
+**SunRise Solar · Owner: Hemayet Hossain · v1.0 — 18/09/2026**
 
 **Scope:** creating, verifying, and deactivating internal Salesforce users.
 
-> ### ⚠️ This document is a draft. Do not treat it as the standard.
->
-> **Three `✍️ TODO` sections below are unwritten** — §1, §3 and §4. Until they
-> are filled in, this SOP cannot be handed to anyone as the way SunRise provisions
-> users, because its reasoning is missing in exactly the places that explain *why*
-> the steps are in the order they are.
->
-> *(Corrected 03/09/2026: this read "Four — §1, §3, §4 and §7" until today. **§7 was
-> written on 02/09 by CF-09** and the header was never updated, so the document went on
-> declaring a blank it had already filled.)*
->
-> **Version history:**
->
-> | Version | Date | Change |
-> |---|---|---|
-> | v1.0 | 19/08/2026 | First issue — **stamped 1.0 in error, with four sections unwritten** |
-> | **v0.9** | **26/08/2026** | **Reversioned down.** A document numbered 1.0 claims to be finished. This one is not, and a reader has no way to tell from the header. Reverting the number is the honest fix; it goes back to 1.0 when the blanks are filled, not before |
+The explanations in sections 1, 3 and 4 were completed on 18/09/2026
+under CF-08. Section 4 uses Ben's documented provisioning experience;
+the previously requested attribution to Sarah was not substantiated
+in the notes reviewed.
 
-> Items marked **✍️ TODO** are deliberately left for the SOP owner to write in
-> their own words. An SOP in someone else's voice is not yours to defend.
+## Version history
+
+| Version | Date | Change |
+|---|---|---|
+| v1.0 | 19/08/2026 | Initially labelled v1.0 with four sections unfinished. |
+| v0.9 DRAFT | 26/08/2026 | Returned to draft to reflect the unfinished sections. |
+| v0.9 DRAFT | 02/09/2026 | Freeze-versus-deactivate explanation completed under CF-09. |
+| v0.9 DRAFT | 03/09/2026 | Outstanding-section count corrected from four to three. |
+| v1.0 | 18/09/2026 | Completed sections 1, 3 and 4 under CF-08; clarified the policy on copying user access. |
 
 ---
 
@@ -37,8 +31,13 @@ Before touching `Setup → Users`:
   manager with options: (a) purchase, (b) deactivate an unused account (see §6),
   (c) defer the start date. **Never repurpose an active user's record.**
 
-> ✍️ **TODO — one line, your words:** why this is step 1 and not step 3, referencing
-> what happened on 19/08/2026.
+Check licence availability and suitability before creating the user.
+On 19/08/2026, all four Salesforce licences were already used.
+The licence determines which profiles and object access are available,
+so a spare Platform licence is not automatically a suitable substitute.
+Checking first gives time to escalate a shortage without rushing into
+deactivating or re-licensing an existing user whose records and access
+still need to be protected.
 
 ## 2. Create the user — in this order
 
@@ -65,19 +64,30 @@ System Administrators.
 
 **Policy:** leave it unticked unless the request states the business reason.
 
-> ✍️ **TODO — your words:** why this one is worth calling out in an SOP at all
-> (hint: you met it in Phase 0 as `DML operation Delete not allowed on Campaign`).
+The Phase 0 error `DML operation Delete not allowed on Campaign`
+showed why this check deserves an explicit step: the error identifies
+the failed operation without explaining which access requirement is
+missing. Check the user's licence, Campaign object permissions and
+Marketing User checkbox separately, including for administrators.
+A permission set cannot overcome a licence that excludes Campaigns,
+so it would not resolve Priya's Platform licence restriction.
 
 ## 4. Why we never clone users
 
-Cloning copies the source user's accumulated permission sets and record access —
-including grants they should never have had. The new hire inherits the mess
-silently, nobody notices, and the audit finds it months later attached to someone
-who has no idea why they have it. Always build from scratch against the written
-spec.
+Create each user from the approved provisioning request rather than
+treating another user's access as the template. Copying an existing
+access configuration can carry forward permissions the new role does
+not require. Select the profile, role and permission sets deliberately,
+and verify each grant against the written requirements.
 
-> ✍️ **TODO:** cite the concrete local example (Sarah's note re: Jack's accumulated
-> permissions) once you have confirmed the detail.
+When I created Ben, Salesforce saved the record with Role, Manager
+and Title empty. A successful Save did not prove that provisioning
+was complete. Done means the user's licence, profile, role, manager
+and permission sets match the agreed job requirements, with the
+required user details completed. After saving and before handover,
+I will review those settings against the provisioning request and
+verify that the user can perform the intended work without unnecessary
+access.
 
 ## 5. Verification — every new user, no exceptions
 
