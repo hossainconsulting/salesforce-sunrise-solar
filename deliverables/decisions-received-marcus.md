@@ -98,9 +98,11 @@ Retrieved and committed to `force-app/main/default/reports/SunRise_Ops/`.
 > unchanged threshold** — which is the argument for the standing rule rather than a
 > hand-triaged list, and the reason the number must always be quoted with its date.
 
-**Still to do on CF-05:** align the **14-day triage split** in
-[ticket-2.3-pipeline-hygiene-report.md](ticket-2.3-pipeline-hygiene-report.md) §③ to 30
-days. *"Kill the fourteen"* means the document too, not only the report.
+**Documentation aligned 18/09/2026:** Ticket 2.3 now uses the approved
+30-day threshold in its triage summary and all 56 detailed rows.
+Verified against the 26/08/2026 snapshot: ASK OWNER 26 ($323,840),
+RE-DATE 30 ($378,496), CLOSE 0 ($0). The report-filter description
+was updated and historical totals explicitly dated.
 
 **And the Monday subscription still points at Jack and Mia**, neither of whom has ever
 logged in. Not fixable until decision 3 lands Jake a licence.

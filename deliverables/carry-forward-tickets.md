@@ -1,5 +1,19 @@
 # Carry-forward tickets — Weeks 1 and 2
 
+## Update 18/09/2026 — CF-05 documentation aligned
+
+Aligned [Ticket 2.3](ticket-2.3-pipeline-hygiene-report.md) with
+Marcus's approved 30-day threshold, replacing the 14-day triage split.
+
+Verified all 56 rows against the 26/08/2026 snapshot:
+ASK OWNER 26 ($323,840), RE-DATE 30 ($378,496), CLOSE 0 ($0).
+Total: $702,336. Historical figures remain explicitly dated.
+
+The outstanding documentation alignment is complete. The Monday
+subscription dependency recorded in the decision log remains separate.
+No Salesforce configuration or Opportunity records changed in this update.
+
+
 ## Update 18/09/2026 — CF-08 provisioning SOP completed
 
 Completed the explanations in sections 1, 3 and 4 of the
