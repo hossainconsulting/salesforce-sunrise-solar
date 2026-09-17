@@ -77,15 +77,24 @@ Both criteria depend on things this org does not contain:
 So the rule as approved produces one bucket containing everything, which is not a
 triage.
 
-### What I substituted
+### Triage aligned to the approved 30-day threshold
 
-**Days past close, the only signal the org actually has:**
+Marcus confirmed “30 days. Kill the 14” on 01/09/2026.
+This section was aligned on 18/09/2026; figures below use the
+original **26/08/2026 snapshot**, not current Salesforce totals.
 
-| Recommendation | Substituted criterion | Records | Value |
-|---|---|---|---|
-| **CLOSE** | more than 90 days past | **0** | $0 |
-| **ASK OWNER** | more than 14 days past | **42** | **$535,424** |
-| **RE-DATE** | 14 days or less past | **14** | **$166,912** |
+| Recommendation | Criterion: days past Close Date | Records | Value |
+|---|---|---:|---:|
+| **CLOSE** | More than 90 days past; requires evidence before closure | **0** | **$0** |
+| **ASK OWNER** | More than 30 days, up to 90 days past | **26** | **$323,840** |
+| **RE-DATE** | 1–30 days past; confirm a realistic date with the owner | **30** | **$378,496** |
+
+These are triage recommendations, not instructions to change records
+automatically. The 14-day split is superseded.
+
+Decision and report-change evidence:
+[CF-05 — executed 01/09](decisions-received-marcus.md#cf-05--executed-0109).
+
 
 CLOSE is deliberately left at 90 days rather than lowered to make it select
 something. **I am not recommending that a single Opportunity be closed**, because
@@ -159,24 +168,32 @@ Marcus, not something I should do unilaterally.
 > **Any open Opportunity whose Close Date is more than 30 days past gets re-dated or
 > closed by its owner within a week, or it is closed lost with the reason "stale".**
 
-Applied to the org today, that rule selects **26 Opportunities worth $323,840**.
+Applied to the 26/08/2026 snapshot, that rule selects
+**26 Opportunities worth $323,840**.
 
-Note the deliberate difference between this and §③: the **30-day rule is the standing
-policy**, and the **14-day cut in the triage table is a chase-priority split** for
-clearing today's backlog. They are answering different questions. If you would rather
-run one number, say so and I will align the triage to 30 days.
+The standing rule and triage now use the same 30-day threshold,
+as confirmed by Marcus on 01/09/2026. The former 14-day
+chase-priority split is superseded. Counts here refer to the
+26/08/2026 snapshot.
 
 ---
 
 ## ⑥ Set up so it nags you automatically
 
 **Report:** *Pipeline Hygiene - Stale Open Opps*, folder **SunRise Ops**
-(Id `00OgK00000Dh8inUAB`). Filters: `Closed = false AND Close Date < TODAY`, sorted
+(Id `00OgK00000Dh8inUAB`). Filters recorded after the 01/09/2026 change:
+`Closed = false AND Close Date < N_DAYS_AGO:30`, sorted
 oldest first. **This is now the only Pipeline Hygiene report in the org** — three
 near-identical copies from parallel builds were deleted on 26/08 so there is no
 ambiguity about which report the Monday email refers to.
 
-### The forecast number you should actually quote
+
+### Forecast figures from the original snapshot
+
+**Historical figures:** the amounts below describe the 26/08/2026
+report with its former `Close Date < TODAY` filter. They are not
+totals for the revised 30-day report. Rerun that report and record
+the run date before quoting updated figures.
 
 The report carries two totals, and the difference matters more than either:
 
@@ -284,7 +301,8 @@ searching by name. Backlog, not a fix for this ticket.
 
 1. **Reassign the 42 ownerless Opportunities ($515,584)** before triage — 15 of them
    from a user who was deactivated a week ago.
-2. **30 days or 14 days** as the single standing threshold.
+2. 2. **Resolved 01/09/2026:** Marcus selected 30 days as the single
+   standing threshold. Documentation aligned on 18/09/2026.
 3. **Jake needs a user account.** Until then the weekly nag cannot reach him. Fourth
    item blocked on the Week 1 licence decision.
 4. **`sop-user-deactivation.md` needs an owned-records gate** so the EPIC situation
@@ -329,22 +347,22 @@ searching by name. Backlog, not a fix for this ticket.
 | Jessica Silva Residence | 13.2kW Rooftop Solar | Mia Kelly | Qualification | $14,592 | 2026-07-24 | 33 | **ASK OWNER** | owner never logged in |
 | Jack White Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Qualification | $11,008 | 2026-07-25 | 32 | **ASK OWNER** | owner deactivated |
 | Olivia Campbell Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Needs Analysis | $15,232 | 2026-07-26 | 31 | **ASK OWNER** |  |
-| William Kowalski Residence | 6.6kW Rooftop Solar | Jack Nguyen | Id. Decision Makers | $11,648 | 2026-07-27 | 30 | **ASK OWNER** | owner never logged in |
-| Harper Thompson Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Needs Analysis | $14,464 | 2026-07-28 | 29 | **ASK OWNER** |  |
-| Daniel Clark Residence | 6.6kW Rooftop Solar | Jack Nguyen | Qualification | $10,880 | 2026-07-29 | 28 | **ASK OWNER** | owner never logged in |
-| Zoe Foster Residence | 13.2kW Rooftop Solar | Mia Kelly | Qualification | $15,104 | 2026-07-30 | 27 | **ASK OWNER** | owner never logged in |
-| James Nguyen Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Needs Analysis | $11,520 | 2026-07-31 | 26 | **ASK OWNER** | owner deactivated |
-| Ruby Harris Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Id. Decision Makers | $15,744 | 2026-08-01 | 25 | **ASK OWNER** |  |
-| Liam Bennett Residence | 6.6kW Rooftop Solar | Jack Nguyen | Prospecting | $12,160 | 2026-08-02 | 24 | **ASK OWNER** | owner never logged in |
-| Jessica Silva Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Qualification | $14,976 | 2026-08-03 | 23 | **ASK OWNER** |  |
-| Jack White Residence | 6.6kW Rooftop Solar | Jack Nguyen | Qualification | $11,392 | 2026-08-04 | 22 | **ASK OWNER** | owner never logged in |
-| Olivia Campbell Residence | 13.2kW Rooftop Solar | Mia Kelly | Needs Analysis | $15,616 | 2026-08-05 | 21 | **ASK OWNER** | owner never logged in |
-| William Kowalski Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Id. Decision Makers | $12,032 | 2026-08-06 | 20 | **ASK OWNER** | owner deactivated |
-| Harper Thompson Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Prospecting | $16,256 | 2026-08-07 | 19 | **ASK OWNER** |  |
-| Nathan Ryan Residence | 6.6kW Rooftop Solar | Jack Nguyen | Id. Decision Makers | $12,672 | 2026-08-08 | 18 | **ASK OWNER** | owner never logged in |
-| Ava Mancini | Ava Mancini Residence - 13.2kW Rooftop Solar | Mia Kelly | Needs Analysis | $9,088 | 2026-08-09 | 17 | **ASK OWNER** | owner never logged in |
-| Andrew Anderson Residence | 6.6kW Rooftop Solar | Jack Nguyen | Needs Analysis | $11,904 | 2026-08-10 | 16 | **ASK OWNER** | owner never logged in |
-| Ruby Harris Residence | 13.2kW Rooftop Solar | Mia Kelly | Id. Decision Makers | $16,128 | 2026-08-11 | 15 | **ASK OWNER** | owner never logged in |
+| William Kowalski Residence | 6.6kW Rooftop Solar | Jack Nguyen | Id. Decision Makers | $11,648 | 2026-07-27 | 30 | **RE-DATE** | owner never logged in |
+| Harper Thompson Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Needs Analysis | $14,464 | 2026-07-28 | 29 | **RE-DATE** |  |
+| Daniel Clark Residence | 6.6kW Rooftop Solar | Jack Nguyen | Qualification | $10,880 | 2026-07-29 | 28 | **RE-DATE** | owner never logged in |
+| Zoe Foster Residence | 13.2kW Rooftop Solar | Mia Kelly | Qualification | $15,104 | 2026-07-30 | 27 | **RE-DATE** | owner never logged in |
+| James Nguyen Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Needs Analysis | $11,520 | 2026-07-31 | 26 | **RE-DATE** | owner deactivated |
+| Ruby Harris Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Id. Decision Makers | $15,744 | 2026-08-01 | 25 | **RE-DATE** |  |
+| Liam Bennett Residence | 6.6kW Rooftop Solar | Jack Nguyen | Prospecting | $12,160 | 2026-08-02 | 24 | **RE-DATE** | owner never logged in |
+| Jessica Silva Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Qualification | $14,976 | 2026-08-03 | 23 | **RE-DATE** |  |
+| Jack White Residence | 6.6kW Rooftop Solar | Jack Nguyen | Qualification | $11,392 | 2026-08-04 | 22 | **RE-DATE** | owner never logged in |
+| Olivia Campbell Residence | 13.2kW Rooftop Solar | Mia Kelly | Needs Analysis | $15,616 | 2026-08-05 | 21 | **RE-DATE** | owner never logged in |
+| William Kowalski Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Id. Decision Makers | $12,032 | 2026-08-06 | 20 | **RE-DATE** | owner deactivated |
+| Harper Thompson Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Prospecting | $16,256 | 2026-08-07 | 19 | **RE-DATE** |  |
+| Nathan Ryan Residence | 6.6kW Rooftop Solar | Jack Nguyen | Id. Decision Makers | $12,672 | 2026-08-08 | 18 | **RE-DATE** | owner never logged in |
+| Ava Mancini | Ava Mancini Residence - 13.2kW Rooftop Solar | Mia Kelly | Needs Analysis | $9,088 | 2026-08-09 | 17 | **RE-DATE** | owner never logged in |
+| Andrew Anderson Residence | 6.6kW Rooftop Solar | Jack Nguyen | Needs Analysis | $11,904 | 2026-08-10 | 16 | **RE-DATE** | owner never logged in |
+| Ruby Harris Residence | 13.2kW Rooftop Solar | Mia Kelly | Id. Decision Makers | $16,128 | 2026-08-11 | 15 | **RE-DATE** | owner never logged in |
 | Liam Bennett Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Prospecting | $12,544 | 2026-08-12 | 14 | **RE-DATE** | owner deactivated |
 | Jessica Silva Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Id. Decision Makers | $8,960 | 2026-08-13 | 13 | **RE-DATE** |  |
 | Jack White Residence | 6.6kW Rooftop Solar | Jack Nguyen | Needs Analysis | $13,184 | 2026-08-14 | 12 | **RE-DATE** | owner never logged in |
@@ -360,5 +378,5 @@ searching by name. Backlog, not a fix for this ticket.
 | Oliver Murphy Residence | 6.6kW Rooftop Solar | OrgFarm EPIC | Needs Analysis | $13,568 | 2026-08-24 | 2 | **RE-DATE** | owner deactivated |
 | Olivia Campbell Residence | 13.2kW Rooftop Solar | Hemayet Hossain | Qualification | $9,984 | 2026-08-25 | 1 | **RE-DATE** |  |
 
-**Totals:** 56 Opportunities · $702,336 · CLOSE 0 ($0) · ASK OWNER 42 ($535,424) ·
-RE-DATE 14 ($166,912)
+**Totals:** 56 Opportunities · $702,336 · CLOSE 0 ($0) ·
+ASK OWNER 26 ($323,840) · RE-DATE 30 ($378,496).
