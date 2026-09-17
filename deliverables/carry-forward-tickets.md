@@ -1,5 +1,20 @@
 # Carry-forward tickets — Weeks 1 and 2
 
+## Update 17/09/2026 — CF-12 role assignments
+
+CF-12 resolved for Jack Nguyen and Mia Kelly.
+Phase 0 section 0.5 documents Jack as Sydney and Mia as Newcastle.
+
+Created Sydney Sales Team under Director, Direct Sales and assigned
+Jack. Assigned Mia to Newcastle Sales Team; Ben Carter remains there.
+UI and SOQL verified all three users as active with the expected roles.
+
+Both role definitions were retrieved. User assignments are separate
+from role metadata. Record visibility and forecasting were not tested.
+The broader hierarchy redesign remains open under CF-15.
+
+See [verification details](cf-12-role-verification.md).
+
 ## Update 17/09/2026 — CF-26 list-view fix
 
 CF-26 fixed in the org and verified as administrator.
