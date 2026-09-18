@@ -338,7 +338,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
 | CF-17 | Placeholder Manager assignments for four users | W1 · 1.1 | **DEFERRED — verified 18/09; Manager decisions needed** | Marcus: confirm Manager assignments; linked CF-15 request not sent |
 | CF-18 | Marketing Campaign Access permission set | W1 · 1.3 | **DEFERRED — verified 18/09; licence dependency remains** | CF-03 |
-| CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | 🔵 DEFERRED | CF-20 |
+| CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | **DEFERRED — verified 18/09; three Account merges pending** | Marcus: survivorship decisions for Kowalski, Bennett and Young |
 | CF-20 | Ten middle-initial pairs, held for confirmation | W2 · 2.1 | ✅ **CLOSED 05/09 — all 10 answered, 3 days early.** 7 separate, 3 same household. **All 20 task records corrected 07/09** — they still asserted the phone-format evidence, which finished **3 for 10**. Merging on it would have been wrong 7 times | — |
 | CF-23 | ~~23~~ **62 records owned by deactivated OrgFarm EPIC** — and it was 39 Flows nobody had counted | W2 · CF-04 | ✅ **CLOSED 02/09 · VERIFIED 03/09** — [sweep artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md): 185 of 187 confirmed zero, 2 unqueryable | — |
 | CF-24 | **None of Phase 0's three planted bugs exist** — and Week 4.2's was deleted by Ticket 1.1 | P0 · §0.8 | ✅ **PARTLY CLOSED 07/09 · verified in the org** — Weeks 5.1 and 10.1 planted the same evening. **Week 4.2's is unrecoverable** and becomes a build, not a staged diagnosis | — |
@@ -1170,11 +1170,33 @@ was not tested, and no message was sent.
 
 ## CF-19 — 47 accounts still violate the naming standard
 
-Still named `… Residence`, grandfathered by the `ISNEW() || ISCHANGED(Name)` guard on
-the validation rule so they remain editable.
+**Verified 18/09/2026: Deferred pending the remaining Account merges.**
 
-**Deliberately not renamed yet:** renaming before the merge tail is finished makes the
-remaining duplicates *harder* to spot, not easier. Sequence after CF-20.
+A read-only query against `sunrise` returned 47 Accounts whose names contain
+`Residence`. Both records remain present for each of the Kowalski, Bennett
+and Young pairs.
+
+CF-20's customer confirmations are complete: seven pairs represent separate
+households and three represent the same household. Completion of those
+confirmations does not mean the three Account merges have been executed.
+
+The [survivorship request](status-note-marcus-cf-01-range-revision.md)
+recommends retaining the record with the customer's preferred phone number
+and preserving the alternate number before merging. This remains a proposed
+approach; the searched decision log returned no matching survivorship decision.
+
+The local `Account_Name_No_Residence` validation-rule metadata specifies
+person-only names, with property details in address fields. Its formula
+checks for `Residence` on creation or a Name change. Live validation behaviour
+was not tested during this review.
+
+The recorded sequence remains: resolve survivorship, complete and verify
+the three merges, then refresh the Account list and prepare the naming
+updates. Preserve the seven pairs confirmed as separate households.
+
+CF-19 remains open and deferred. No Accounts were renamed or merged,
+no validation rule was changed, and no message was sent.
+
 
 ## CF-20 — Ten middle-initial pairs, held for confirmation
 
