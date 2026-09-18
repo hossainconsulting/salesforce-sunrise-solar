@@ -337,7 +337,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
 | CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
 | CF-17 | Placeholder Manager assignments for four users | W1 · 1.1 | **DEFERRED — verified 18/09; Manager decisions needed** | Marcus: confirm Manager assignments; linked CF-15 request not sent |
-| CF-18 | `Marketing Campaign Access` permission set | W1 · 1.3 | 🔵 DEFERRED | CF-03 |
+| CF-18 | Marketing Campaign Access permission set | W1 · 1.3 | **DEFERRED — verified 18/09; licence dependency remains** | CF-03 |
 | CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | 🔵 DEFERRED | CF-20 |
 | CF-20 | Ten middle-initial pairs, held for confirmation | W2 · 2.1 | ✅ **CLOSED 05/09 — all 10 answered, 3 days early.** 7 separate, 3 same household. **All 20 task records corrected 07/09** — they still asserted the phone-format evidence, which finished **3 for 10**. Merging on it would have been wrong 7 times | — |
 | CF-23 | ~~23~~ **62 records owned by deactivated OrgFarm EPIC** — and it was 39 Flows nobody had counted | W2 · CF-04 | ✅ **CLOSED 02/09 · VERIFIED 03/09** — [sweep artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md): 185 of 187 confirmed zero, 2 unqueryable | — |
@@ -1144,9 +1144,29 @@ and no message was sent.
 
 ## CF-18 — `Marketing Campaign Access` permission set
 
-**Deliberately not built.** Permission sets are constrained by licence type, so it
-would grant Priya nothing while she is on a Platform licence. Building it now would
-look like progress and deliver none. **Blocked on CF-03.**
+**Verified 18/09/2026: Deferred under CF-03.**
+
+Read-only queries against `sunrise` confirmed:
+- Priya Sharma is active with the Standard Platform User profile
+  and Salesforce Platform licence.
+- Her Marketing User flag is false.
+- Salesforce licences: 4 total, 4 used.
+- Salesforce Platform licences: 6 total, 1 used.
+- An exact-label PermissionSet query for Marketing Campaign Access
+  returned no records. This does not rule out differently named sets.
+
+The recorded licence dependency remains unresolved. The CF-11
+draft reply records October 2026 as the budget timing; it does
+not establish that a licence has been provisioned.
+
+Once a suitable licence is available, confirm Priya's required
+Campaign activities, configure the necessary access, and test it
+before confirming that Campaign access is ready.
+
+CF-18 remains open and deferred. No licence, profile, permission
+set or User setting changed during this review. Campaign access
+was not tested, and no message was sent.
+
 
 ## CF-19 — 47 accounts still violate the naming standard
 
