@@ -335,7 +335,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
 | CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
-| CF-16 | Default owner fields all point at the admin | W1 · 1.1 | 🟡 READY | — |
+| CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
 | CF-17 | Ben's Manager is a placeholder | W1 · 1.1 | 🔵 DEFERRED | Real reporting line |
 | CF-18 | `Marketing Campaign Access` permission set | W1 · 1.3 | 🔵 DEFERRED | CF-03 |
 | CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | 🔵 DEFERRED | CF-20 |
@@ -1084,10 +1084,29 @@ user assignments or records changed during this review.
 
 ## CF-16 — Default owner fields all point at the admin
 
-Automated Case User, Default Case Owner, Default Lead Owner, Default Workflow User and
-both lead assignment rule entries were all pointed at Hemayet during Ticket 1.1 to clear
-EPIC's deactivation blockers. **That was a means to an end, not a design.** Revisit once
-queues exist.
+**Updated 18/09/2026: Ownership decisions needed; request drafted, not sent.**
+
+Default Lead Owner, Default Case Owner, Automated Case User and
+Default Workflow User remain Hemayet Hossain. Both default-owner
+notification checkboxes are unchecked. Read-only queries returned
+no queues or queue-object associations.
+
+All 150 unconverted Leads are owned by Hemayet Hossain and have
+status Open - Not Contacted. Their current ownership does not
+establish how they were originally assigned.
+
+The two admin-assigned entries described previously belong to the
+inactive Standard lead assignment rule. The active NSW Territory
+Routing rule has three entries assigned to Jack, Mia and Ben.
+Its criteria and order were inspected, not changed or tested.
+
+Decisions are needed on inbound Lead ownership, response time and
+backup coverage, default Case ownership, the existing Lead backlog,
+and accountability for automation-user settings.
+
+See [CF-16 ownership review](cf-16-default-ownership-review.md).
+CF-16 remains open. The request has not been sent, and this review
+changed no Salesforce settings, assignment rules or records.
 
 ---
 
