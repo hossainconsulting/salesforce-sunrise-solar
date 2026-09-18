@@ -1,6 +1,7 @@
 # Reply to Zara — Campaign access for Priya Sharma
 
-**21/08/2026** · Draft — check the licence position before sending.
+ **Originally drafted:** 21/08/2026 · **Updated:** 18/09/2026
+**Status:** Three-sentence draft ready; not sent.
 
 ---
 
@@ -9,7 +10,7 @@
 |                |                                                                                                                                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **To**         | Zara                                                                                                                                                                                                                                              |
-| **Channel**    | **Email — and it always was.** Zara emailed in (_"Zara, email, Wednesday · Subject: Campaign access"_) and the brief asks for _"a three-sentence email reply"_. **Her address is not recorded anywhere in this repo** — the same gap Marcus's was |
+| **Channel**    | **Email — and it always was.** Zara emailed in (_"Zara, email, Wednesday · Subject: Campaign access"_) and the brief asks for _"a three-sentence email reply"_. Recipient: `hossainconsulting+zara@gmail.com`; delivery verified 02/09/2026 as recorded below.|
 | **Audit copy** | This document, committed                                                                                                                                                                                                                          |
 
 > **Zara does not need a Chatter account.** She was briefly listed in CF-22 as a sixth
@@ -37,14 +38,19 @@ CF-11, the three-sentence version, which is Hemayet's to write.
 
 **Subject:** Re: Campaign access
 **To:** **Zara Lee — `hossainconsulting+zara@gmail.com`**
-**Status: SENDABLE.** Address proven by delivery — a Salesforce verification email
-arrived there on 02/09 and was opened. Send from your own mail client; no Salesforce
-account is involved in sending it.
+**Status: Draft ready; not sent.**
+The recipient address was verified by delivery on 02/09/2026,
+as recorded below. Send from Hemayet's mail client.
 
-Hi Zara — Priya's account is set up and she can log in now. The Campaign side needs an
-extra licence we're buying in **October**, so creating and editing Campaigns will start
-then. I'll switch it on for her the day the licence lands and send you a note that
-morning so you know it's live.
+**Checked 18/09/2026:** Priya is active with the Standard Platform
+User profile and Salesforce Platform licence. Marketing User is
+false and LastLoginDate is blank; successful login was not verified.
+Salesforce licence usage is 4 of 4. Marcus's recorded decision
+places Priya's additional licence in the October 2026 budget.
+
+Hi Zara — Priya's account has been created, but her Campaign access is not yet enabled.
+Marcus has confirmed October 2026 as the budget timing for the additional licence she needs.
+Once the licence is available, I'll configure and test her Campaign access and confirm when it is ready to use.
 
 — Hemayet
 
