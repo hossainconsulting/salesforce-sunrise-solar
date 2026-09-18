@@ -336,7 +336,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
 | CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
 | CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
-| CF-17 | Ben's Manager is a placeholder | W1 · 1.1 | 🔵 DEFERRED | Real reporting line |
+| CF-17 | Placeholder Manager assignments for four users | W1 · 1.1 | **DEFERRED — verified 18/09; Manager decisions needed** | Marcus: confirm Manager assignments; linked CF-15 request not sent |
 | CF-18 | `Marketing Campaign Access` permission set | W1 · 1.3 | 🔵 DEFERRED | CF-03 |
 | CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | 🔵 DEFERRED | CF-20 |
 | CF-20 | Ten middle-initial pairs, held for confirmation | W2 · 2.1 | ✅ **CLOSED 05/09 — all 10 answered, 3 days early.** 7 separate, 3 same household. **All 20 task records corrected 07/09** — they still asserted the phone-format evidence, which finished **3 for 10**. Merging on it would have been wrong 7 times | — |
@@ -1112,10 +1112,35 @@ changed no Salesforce settings, assignment rules or records.
 
 # 🔵 Deferred — with reasons
 
-## CF-17 — Ben's Manager is a placeholder
+## CF-17 — Placeholder Manager assignments for four users
 
-Set to the admin because the real reporting line does not exist as users yet. Reassign
-when it does. Same is true of Jack, Mia and Priya — **all four report to Hemayet.**
+**Verified 18/09/2026: Deferred pending confirmed Manager assignments.**
+
+A read-only User query against `sunrise` returned:
+
+| User | Active | Current Manager | Current role |
+|---|---|---|---|
+| Ben Carter | Yes | Hemayet Hossain | Newcastle Sales Team |
+| Jack Nguyen | Yes | Hemayet Hossain | Sydney Sales Team |
+| Mia Kelly | Yes | Hemayet Hossain | Newcastle Sales Team |
+| Priya Sharma | Yes | Hemayet Hossain | None |
+
+The earlier register identified these Manager assignments as
+placeholders. The current query confirms the stored assignments,
+not the intended reporting lines.
+
+The searched decision log returned no matching Manager decision.
+The [CF-15 review](cf-15-hierarchy-review.md) includes an unsent
+request to confirm Manager-field assignments for approval routing.
+That decision should explicitly cover all four users listed here.
+
+Once assignments are confirmed, verify the intended manager users
+and review any approval-routing dependencies before making changes.
+Approval behaviour was not tested during this review.
+
+CF-17 remains open and deferred. No User records were changed,
+and no message was sent.
+
 
 ## CF-18 — `Marketing Campaign Access` permission set
 
