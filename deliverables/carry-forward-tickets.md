@@ -329,7 +329,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-07 | Roster an owner for the duplicate queue | W2 · 2.2 | 🟠 **STILL BLOCKED — Jake exists and is reachable, but Chatter Free cannot open a Duplicate Record Set.** **Stopgap ran 07/09: Hemayet read the Monday queue, 0 sets** | CF-03 purchase |
 | CF-08 | ~~Four~~ **Three** unwritten sections in the provisioning SOP *(§7 closed by CF-09)* | W1 · 1.1 | 🟠 BLOCKED | Hemayet |
 | CF-09 | The freeze-vs-deactivate paragraph | W1 · 1.2 | ✅ **WRITTEN 02/09** — SOP now v1.2 | — |
-| CF-10 | Dormant-user review: the send decision | W1 · 1.2 | 🟠 BLOCKED | Hemayet |
+| CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
 | CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | ✅ **SENDABLE 02/09** — address proven | Hemayet to send |
 | CF-12 | Jack and Mia have no role | W1 · 1.1 | 🟡 READY | — |
 | CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
@@ -842,12 +842,28 @@ worked example. The paragraph is easier to write today than it was on the 19th.
 
 ## CF-10 — Dormant-user review: the send decision
 
-**File:** [dormant-user-review.md](dormant-user-review.md) — one TODO before sending
+**File:** [dormant-user-review.md](dormant-user-review.md)
 
-Note that the review's premise has changed since it was written: it lists Jack and Mia
-as *"retain, monitor at 30 days"* on the basis that they own nothing much. **They own
-442 Opportunities between them** (CF-04). The recommendation should be revisited before
-it is sent, not just the TODO filled.
+**Updated 18/09/2026: Draft ready; Hemayet's send decision pending.**
+
+Revised the recommendation using current User, UserLicense,
+LoginHistory and Opportunity queries. Jack and Mia remain active
+Salesforce users with assigned sales roles, blank LastLoginDate
+fields and no LoginHistory records returned.
+
+Their former 442 Opportunities were transferred to admin custody
+on 02/09/2026 under CF-04. The current ownership query returned
+no records for either user; this does not establish that their
+licences are unnecessary.
+
+The draft asks Marcus to confirm duties and onboarding needs,
+recommends retaining current access pending that decision, and
+withdraws the earlier downgrade recommendation based on non-use.
+
+The drafting TODO is resolved. The message has not been sent,
+and no manager decision is recorded. No Salesforce configuration
+or records changed.
+
 
 ## CF-11 — Zara's reply: the three-sentence version
 
