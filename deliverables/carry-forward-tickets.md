@@ -334,7 +334,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-12 | Jack and Mia have no role | W1 · 1.1 | 🟡 READY | — |
 | CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
-| CF-15 | The role hierarchy is Salesforce's US sample | W1 · 1.1 | 🟡 READY | — |
+| CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
 | CF-16 | Default owner fields all point at the admin | W1 · 1.1 | 🟡 READY | — |
 | CF-17 | Ben's Manager is a placeholder | W1 · 1.1 | 🔵 DEFERRED | Real reporting line |
 | CF-18 | `Marketing Campaign Access` permission set | W1 · 1.3 | 🔵 DEFERRED | CF-03 |
@@ -1062,9 +1062,25 @@ ticket was about to declare lost.**
 
 ## CF-15 — The role hierarchy is Salesforce's US sample
 
-18 of the org's roles are the stock Salesforce demo hierarchy and describe no part of
-SunRise. Only *Newcastle Sales Team* was purpose-built. A real hierarchy is undesigned,
-and CF-12 cannot be answered properly without one.
+**Updated 18/09/2026: Requirements needed; decision request drafted, not sent.**
+
+Read-only verification returned 20 roles: 18 existing sample roles
+plus Sydney Sales Team and Newcastle Sales Team. Both local sales
+roles sit under Director, Direct Sales.
+
+CF-12's assignments are complete: Jack is in Sydney; Mia and Ben
+are in Newcastle. The broader hierarchy redesign remains open.
+Record visibility and forecasting behaviour have not been verified.
+
+The reviewed sources do not establish the intended management
+structure or access requirements. A draft asks Marcus to confirm
+team oversight, record visibility and edit access, forecasting
+oversight, and Manager-field assignments for approval routing.
+
+See [CF-15 hierarchy review](cf-15-hierarchy-review.md).
+The request has not been sent. No Salesforce configuration,
+user assignments or records changed during this review.
+
 
 ## CF-16 — Default owner fields all point at the admin
 
