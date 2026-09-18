@@ -1,41 +1,71 @@
 # Dormant user review — SunRise Solar
 
-**Prepared by:** Hemayet Hossain · **Date:** 19/08/2026 · **For:** Marcus
-**Source:** `User` and `LoginHistory` queried directly against the `sunrise` org,
-19/08/2026. Not a Setup screenshot — the underlying records.
+**Prepared by:** Hemayet Hossain · **For:** Marcus
+**Originally prepared:** 19/08/2026 · **Updated:** 18/09/2026
+**Sources:** Read-only `User`, `UserLicense`, `LoginHistory` and
+`Opportunity` queries against `sunrise` on 18/09/2026, plus the
+dated CF-04 custody record. Historical sections below describe
+the original 19/08/2026 review.
 
 ---
 
-## The short version
+## Updated review — 18/09/2026
 
-Marcus asked for anyone dormant 90+ days. **The org is 8 days old, so nobody
-qualifies** — and that question, answered literally, produces an empty report.
+This update supersedes the original licence-recovery recommendation
+dated 19/08/2026. The historical sections below retain their original
+evidence dates.
 
-The useful signal here is not a *stale* Last Login. It's a **blank** one. Two
-users have never logged in and are holding **2 of our 4 Salesforce licences** —
-which is the same constraint that blocked the Monday new-hire provisioning in
-Ticket 1.1. **These two are the answer to the licence decision I escalated.**
+### Current evidence
 
----
+Read-only queries against `sunrise` on 18/09/2026 showed:
 
-## Salesforce licences — who holds what
+| User | Active | Profile | Licence | Role | LastLoginDate |
+|---|---|---|---|---|---|
+| Jack Nguyen | Yes | Standard User | Salesforce | Sydney Sales Team | Blank |
+| Mia Kelly | Yes | Standard User | Salesforce | Newcastle Sales Team | Blank |
+| Ben Carter | Yes | System Administrator | Salesforce | Newcastle Sales Team | 02/09/2026 |
 
-Salesforce: **4 of 4 used, 0 remaining.** Salesforce Platform: **0 of 6 used.**
+The LoginHistory query for Jack and Mia returned no records.
+The Opportunity ownership query for them also returned no records.
 
-| User | Profile | Last login | Holding a Salesforce licence? | Recommendation |
-|---|---|---|---|---|
-| Hemayet Hossain | System Administrator | 19/08 (today) | Yes | **Retain.** Sole admin. |
-| Ben Carter | Standard User | Never | Yes | **Retain.** Provisioned 18/08, starts Monday. **Review 24/08** — if he hasn't logged in by end of his first week, that's an onboarding failure, not a licence question. |
-| Jack Nguyen | Standard User | Never (created 17/08) | Yes | **Review — decision needed from you.** Never logged in. If Jack is not actively using Salesforce, downgrading him to a Platform licence (0 of 6 used) frees a Salesforce licence at no cost. |
-| Mia Kelly | Standard User | Never (created 17/08) | Yes | **Review — decision needed from you.** As above. |
+Their zero Opportunity ownership has a documented explanation:
+[CF-04](cf-04-interim-custodianship.md) records the transfer of
+221 Opportunities from each user to admin custody on 02/09/2026.
+It is not evidence that their business responsibilities have ended.
 
-**Recommendation to Marcus:** before we buy licences for the two remaining new
-hires, confirm whether Jack and Mia need full Salesforce licences. If either is
-read-mostly or works outside standard CRM objects, a Platform licence covers them
-and we have 6 sitting unused. That is two hires provisioned on Monday for £0.
+Licence usage on 18/09/2026:
 
-If both genuinely need Salesforce licences, then it's a purchase — but we should
-know which it is before Friday, not on Monday morning.
+| Licence | Total | Used | Available |
+|---|---:|---:|---:|
+| Salesforce | 4 | 4 | 0 |
+| Salesforce Platform | 6 | 1 | 5 |
+
+### Recommendation and decision requested
+
+Retain Jack and Mia's current access pending confirmation of their
+responsibilities and onboarding needs. Blank login fields and the
+custody transfer do not establish that their licences are unnecessary.
+
+Withdraw the original recommendation to downgrade them based on
+non-use, and the assumption that read-only duties alone establish
+Platform suitability. Any proposed licence change requires a review
+of the specific access needed and an approved decision.
+
+The CF-03 purchase decision is already recorded; this review does not
+reopen it or assume that additional licences have become available.
+
+### Proposed message to Marcus — not sent
+
+Marcus, the 18 September review shows Jack and Mia are active Salesforce
+users with assigned sales roles, but both have blank Last Login fields
+and the LoginHistory query returned no records. Their previously held
+442 Opportunities were transferred to admin custody under CF-04 on
+2 September, which explains their current zero ownership.
+
+Could you confirm their expected Salesforce duties and who should
+follow up on their onboarding or login barriers? I recommend retaining
+their current access while those needs are confirmed; I am withdrawing
+the earlier downgrade recommendation based on non-use alone.
 
 ## Accounts that are not people — retain, do not touch
 
@@ -78,8 +108,12 @@ an audit is on the line, read `LoginHistory` — it shows *how* they logged in
 (Browser vs. CLI vs. a provisioning app), which is usually the question that
 actually matters.
 
-> ✍️ **TODO before sending:** decide whether you're comfortable putting the
-> Jack/Mia downgrade recommendation to Marcus this directly. You've been here
-> three days and you're proposing changing two colleagues' licences. The
-> recommendation is sound; make sure the framing is a question, not a decision
-> you've already made.
+## Send status — 18/09/2026
+
+The original drafting TODO is resolved: the revised message asks
+Marcus to confirm duties and onboarding needs, and recommends
+retaining current access pending that decision.
+
+**Status: Draft ready for Hemayet's send decision; not sent.**
+No manager response or approval is recorded by this update.
+No Salesforce users, licences, permissions or records were changed.
