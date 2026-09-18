@@ -330,7 +330,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-08 | ~~Four~~ **Three** unwritten sections in the provisioning SOP *(§7 closed by CF-09)* | W1 · 1.1 | 🟠 BLOCKED | Hemayet |
 | CF-09 | The freeze-vs-deactivate paragraph | W1 · 1.2 | ✅ **WRITTEN 02/09** — SOP now v1.2 | — |
 | CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
-| CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | ✅ **SENDABLE 02/09** — address proven | Hemayet to send |
+| CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | **DRAFT READY 18/09 — not sent** | Hemayet to send |
 | CF-12 | Jack and Mia have no role | W1 · 1.1 | 🟡 READY | — |
 | CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
@@ -864,15 +864,24 @@ The drafting TODO is resolved. The message has not been sent,
 and no manager decision is recorded. No Salesforce configuration
 or records changed.
 
-
 ## CF-11 — Zara's reply: the three-sentence version
 
-**File:** [ticket-1.3-reply-to-zara.md](ticket-1.3-reply-to-zara.md) — one TODO
+**File:** [ticket-1.3-reply-to-zara.md](ticket-1.3-reply-to-zara.md)
 
-A drafted three-sentence version already exists at the foot of the Week 1 brief. The
-reply cannot honestly be sent until CF-03 resolves, because **Priya still cannot create
-or edit Campaigns** — `UserPermissionsMarketingUser` is `false` and Platform licences
-have no Campaign access at all.
+**Updated 18/09/2026: Three-sentence draft ready; not sent.**
+
+The reply states Marcus's October 2026 budget decision for Priya's
+additional licence. It confirms that her account exists without
+claiming successful login or promising activation that morning.
+
+Read-only verification on 18/09/2026 showed Priya active on
+Salesforce Platform, Marketing User false and LastLoginDate blank.
+Salesforce licences remain 4 of 4 used.
+
+The recipient address and its recorded 02/09 delivery verification
+are documented in the reply. Hemayet's send decision remains pending.
+Campaign setup and testing remain outstanding; this documentation
+update changed no Salesforce configuration or records.
 
 ---
 
