@@ -76,3 +76,9 @@ results, revenue generated or independently verified business outcomes.
 
 Built by [Hemayet Hossain](https://github.com/hossainconsulting) · Sydney, Australia
 Portfolio: [portfolio.hossainconsulting.com](https://portfolio.hossainconsulting.com)
+
+## AI assistance
+
+OpenAI Codex assisted with documentation drafting, evidence review, and
+implementation guidance. Hemayet Hossain reviewed the work and executed
+the Salesforce and Git operations.
