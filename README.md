@@ -82,3 +82,9 @@ Portfolio: [portfolio.hossainconsulting.com](https://portfolio.hossainconsulting
 OpenAI Codex assisted with documentation drafting, evidence review, and
 implementation guidance. Hemayet Hossain reviewed the work and executed
 the Salesforce and Git operations.
+
+## Verified Salesforce credentials
+
+Hemayet Hossain holds four credentials verified through Salesforce's public credential record: Salesforce Certified Agentforce Specialist, Salesforce Certified Platform Administrator II, Salesforce Certified Platform App Builder, and Salesforce Certified Platform Administrator.
+
+[View the public Salesforce credential record](https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=/EMytG9drkgo/H4/0tgVITa/sw2U8vhbkvkc3jqlaJgauY5cCr+PvNo4YAw1Ki9f) · [Review the Salesforce User Lifecycle SOP](https://github.com/hossainconsulting/salesforce-user-lifecycle-sop)
