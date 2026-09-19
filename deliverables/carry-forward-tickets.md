@@ -1198,25 +1198,42 @@ CF-19 remains open and deferred. No Accounts were renamed or merged,
 no validation rule was changed, and no message was sent.
 
 
-## CF-20 — Ten middle-initial pairs, held for confirmation
-
-**Due 08/09/2026 · 20 Tasks in the org, all Not Started**
-
-`X` and `X J.` as separate accounts — William Kowalski, Liam Bennett, Lucas Tran,
-Michael Young, Ryan Singh, Samuel Fitzgerald, Oliver Murphy, Andrew Anderson, Daniel
-Clark, Joshua Patel.
-
-**Held on purpose.** Evidence is strong but circumstantial: 9 of 10 share a suburb,
-10 of 10 split landline vs mobile. That is enough to state as the expected answer, not
-enough to merge on. Merging them on name similarity plus record age would repeat the
-mistake Ticket 2.1 §③/§④ already records.
-
-This is what keeps the customer count a **41–51 range**, and it is the mechanism CF-01's
-freeze point depends on.
 
 ---
 
 # ✅ Done
+
+## CF-20 — Ten middle-initial pairs: confirmations complete
+
+**CLOSED 05/09/2026 — all ten pairs answered; 20 of 20 confirmation
+tasks completed, three days before the 08/09 deadline.**
+
+The recorded outcomes are seven separate households and three same-household
+pairs. Kowalski, Bennett and Young are the three merge candidates. Preserve
+the seven pairs confirmed as separate households.
+
+The [completed call sheet](cf-20-four-pairs-call-sheet.md) is retained as
+historical working evidence and marked superseded. Its original pending-task
+counts and call instructions describe the position before the final answers.
+
+The register records that all 20 task descriptions were corrected on 07/09.
+The original phone-format hypothesis matched only three of ten outcomes;
+it must not be used as authority to merge the other seven pairs.
+
+The confirmations establish a household count of 48. This is distinct from
+the number of Account records: completed confirmations do not mean that
+the three Account merges have been executed.
+
+The [survivorship request](status-note-marcus-cf-01-range-revision.md)
+records the proposed choices. CF-19's read-only review on 18/09 found both
+records still present for Kowalski, Bennett and Young, with no matching
+survivorship decision found in the searched decision log.
+
+CF-20's confirmation work remains closed. The remaining survivorship
+decisions, merges and subsequent naming updates are tracked under CF-19.
+This documentation review made no Salesforce changes and sent no message.
+
+
 
 ## CF-21 — Open-task visibility
 
