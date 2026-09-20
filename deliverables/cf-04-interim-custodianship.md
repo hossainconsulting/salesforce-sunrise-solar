@@ -3,6 +3,18 @@
 **SunRise Solar · Org `sunrise` · 02/09/2026 · Owner: Hemayet Hossain**
 **Status: EXECUTED 02/09/2026. Temporary by design, with a stated end.**
 
+**Review 21/09/2026:** The live ownership query returned 890 Opportunities,
+all owned by Hemayet Hossain. Jake remains active on Chatter Free.
+Interim custody remains pending handover, with its review due 30/09/2026.
+
+The pre-custody CSV was checked: 890 rows, including 666 unique IDs
+originally owned by EPIC, Jack and Mia. That subset contains 112 open
+records worth $1,421,184 in the 02/09 snapshot. Current stages and amounts,
+and individual record continuity, were not checked. Tables and execution
+figures below remain dated historical evidence.
+
+This review made no Salesforce changes and sent no message.
+
 ---
 
 ## Why this document exists
@@ -74,8 +86,10 @@ reason it was wrong when they sat with EPIC.
 > **Custody ends when the records leave the admin, on the day Jake's Salesforce licence is
 > provisioned.**
 
-That is the part that is settled. Marcus bought three licences (CF-03) — the two Monday
-hires and Jake — so **the trigger is already funded and waits on no further decision.**
+Marcus approved buying three licences (CF-03) on 01/09 — two hires
+and Jake. Approval to buy does not establish purchase or provisioning.
+The 21/09 user query shows Jake still on Chatter Free, so the
+Salesforce-licence handover trigger has not been met.
 
 **What is not settled is where they land.** Whether Jake holds all 666 as a distribution
 stage, or they go directly to reps under a staffing plan, is **Marcus and Jake's call,
