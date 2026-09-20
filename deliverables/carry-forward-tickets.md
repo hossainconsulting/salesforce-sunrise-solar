@@ -342,7 +342,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-20 | Ten middle-initial pairs, held for confirmation | W2 · 2.1 | ✅ **CLOSED 05/09 — all 10 answered, 3 days early.** 7 separate, 3 same household. **All 20 task records corrected 07/09** — they still asserted the phone-format evidence, which finished **3 for 10**. Merging on it would have been wrong 7 times | — |
 | CF-23 | ~~23~~ **62 records owned by deactivated OrgFarm EPIC** — and it was 39 Flows nobody had counted | W2 · CF-04 | ✅ **CLOSED 02/09 · VERIFIED 03/09** — [sweep artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md): 185 of 187 confirmed zero, 2 unqueryable | — |
 | CF-24 | **None of Phase 0's three planted bugs exist** — and Week 4.2's was deleted by Ticket 1.1 | P0 · §0.8 | ✅ **PARTLY CLOSED 07/09 · verified in the org** — Weeks 5.1 and 10.1 planted the same evening. **Week 4.2's is unrecoverable** and becomes a build, not a staged diagnosis | — |
-| CF-26 | **The CF-02 list view has no filter at all** — and is `filterScope: Mine` | W2 · CF-02 | 🔴 **RAISED 07/09.** Sharing fixed; the real defect is underneath it. Described as "private" for nine days without opening the definition | Hemayet: what it should show |
+| CF-26 | CF-02 address-confirmation list view — scope and filter corrected | W2 · CF-02 | **FIXED — administrator-verified 17/09.** All tasks scope; Subject contains "Confirm service address"; six matching tasks, all Completed. See [verification details](cf-26-list-view-verification.md). | Other-user record access remains untested |
 | CF-25 | **150 leads, $180,000 of campaigns, nobody contacted** | W4 · 4.1 | 🔴 **RAISED 07/09** — 69 days, all `Open - Not Contacted`, all owned by the admin | Marcus: who works them |
 
 ---
