@@ -319,7 +319,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | # | Ticket | From | Status | Blocked on |
 |---|---|---|---|---|
 | CF-01 | The customer-count freeze point passes today | W2 · 2.1 | ⚠️ **REOPENED 05/09 — the count is 48, a single number.** Sarah holds 41–51 from 02/09; 41 was never reachable | Marcus: tell Sarah |
-| CF-02 | Six bucket-C address confirmations due today | W2 · 2.1 | ✅ **CLOSED 05/09 — 6 of 6 confirmed.** All prompted, all matched the record; no address changed. **Document corrected 07/09** — it still read `OPEN · 0 of 6`. **One tail: the list view is still private** | — |
+| CF-02 | Six bucket-C address confirmations due today | W2 · 2.1 | ✅ **CLOSED 05/09 — 6 of 6 confirmed.** All prompted, all matched the record; no address changed. **Document corrected 07/09** — it still read `OPEN · 0 of 6`. **List-view follow-up: CF-26 fixed and administrator-verified 17/09; other-user access untested** | — |
 | CF-21 | Open-task visibility — report built | W2 · CF-01 | ✅ **DONE 27/08** | — |
 | CF-22 | Every escalation was addressed to a channel that cannot reach anyone | W1–W2 | ✅ **DONE 29/08** — channel built, six notes sent | — |
 | CF-03 | Licence decision — Salesforce is 4 of 4 | W1 · 1.1 | ✅ **ANSWERED 01/09 — buy three.** Priya waits to October | Purchase |
@@ -1245,7 +1245,9 @@ visible only to whoever thought to look at a stock list view.
 
 **Built:** *CF-01 Open tasks by due date* — Activity report, summary format, grouped by
 due date, filtered to `Status ≠ Completed AND Task = True`. Columns: Subject, Assigned,
-Related To, Status, Priority. Reads **6 due 27/08, 20 due 08/09**.
+Related To, Status, Priority. At the 27/08 build, it read
+**6 due 27/08, 20 due 08/09**.
+These are historical counts, not current report results.
 
 Two corrections made to the version built in the UI:
 
@@ -1259,9 +1261,26 @@ Two corrections made to the version built in the UI:
    reports had to be deleted because parallel UI and metadata builds scattered them
    across three folders. One canonical copy, in version control, from the start.
 
+**Documentation review 20/09/2026:** The local
+`CF01_Open_Tasks_By_Due_Date` report XML confirms Activity type, Summary
+format, organization scope, Tasks only, Status not equal to Completed,
+and daily due-date grouping in ascending order. Its custom due-date
+filter contains no explicit start or end dates. Live report results,
+date-filter behaviour and access as another user were not tested.
+
+CF-21 provides visibility of open tasks. CF-26's address-confirmation
+list view serves a different purpose: retaining task history, including
+completed tasks. CF-26 was verified as administrator on 17/09 and committed
+in `bbce8b4`; other users' record access remains untested.
+
+CF-20's confirmations were completed on 05/09; the remaining three
+Account merges are tracked under CF-19. The observations below describe
+the historical control-design concerns and are retained as written.
+
 ---
 
 ## What Week 3 should not inherit quietly
+
 
 Three of these have a pattern in common — **CF-02, CF-07 and CF-20 are all controls that
 exist and are not being read.** Six overdue Tasks, an empty queue with no reader, twenty

@@ -1,7 +1,7 @@
 # CF-26 — Address-confirmation list view
 
 Date: 2026-09-17
-Status: Fixed in org; verified as administrator; pending Git commit.
+Status: Fixed in org; verified as administrator on 17/09/2026; committed in `bbce8b4`.
 
 ## Purpose
 Show address-confirmation task history, including completed tasks.
