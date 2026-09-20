@@ -764,6 +764,30 @@ pipeline report (2.3), the duplicate queue owner (CF-07) **and** the six CF-02 c
 
 ## CF-04 — Who inherits the 666 unowned Opportunities
 
+**Review 21/09/2026 — interim custody executed; handover pending.**
+Marcus answered on 01/09, and the transfer of 666 Opportunities was
+recorded as executed on 02/09. See the
+[interim custodianship record](cf-04-interim-custodianship.md).
+
+The live ownership query on 21/09 returned 890 Opportunities, all owned
+by Hemayet Hossain. Jake Mathewson remains active on Chatter Free;
+the Salesforce-licence handover trigger has not been met.
+
+The pre-custody CSV contains 890 records. Selecting the original owners
+OrgFarm EPIC, Jack Nguyen and Mia Kelly identifies 666 unique custody
+records, including 112 historically open Opportunities worth $1,421,184.
+Those open counts and amounts are the 02/09 snapshot, not current values.
+The aggregate ownership query did not reconcile individual record IDs.
+
+The 30/09 review remains due. The recorded approval is to buy three
+licences; this review does not establish purchase or provisioning.
+The onward distribution plan remains a follow-up recorded in the custody
+document; no new decision on that plan was verified in this review.
+
+The original problem statement below is retained as historical context.
+Its "Not yet answered" wording describes the position before 01/09.
+This review made no Salesforce changes and sent no message.
+
 **From:** Ticket 2.3 · **The top blocker in the org**
 
 | Owner | Opportunities | Open | Open value | Problem |
