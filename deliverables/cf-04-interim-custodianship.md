@@ -150,7 +150,21 @@ today's transfer proceeds without waiting on it.
 | Evidence | `cf-04-pre-custody-ownership.csv` · `cf-04-post-custody-ownership.csv` |
 | Raised with Marcus | Chatter, 02/09 — the staging question above |
 
-### ⚠️ EPIC is not clear — 23 records remain
+### Historical finding 02/09 — EPIC's remaining ownership
+
+**Follow-up resolved under CF-23:** The build log records that the
+inventory expanded from 23 to 62 records: 13 EmailTemplates, 10 Solutions
+and 39 Flow records, transferred on 02/09.
+
+The [03/09 verification artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md)
+records zero ownership across 185 successfully counted objects for
+OrgFarm EPIC, Jack Nguyen, Mia Kelly, Alan Brooks and Lisa Fernandez.
+Two additional objects, ListViewEvent and ReportEvent, could not be
+counted by this method. This is not a claim that all 187 were verified.
+
+The original finding below describes the position before that resolution.
+This documentation review on 21/09 did not repeat the live sweep,
+change Salesforce records or send a message.
 
 This ticket was framed as *"666 unowned Opportunities"*, but the EPIC problem was always
 **247 records on a disabled user**. The transfer moved the Opportunities only.
