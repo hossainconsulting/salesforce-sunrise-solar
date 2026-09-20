@@ -1,8 +1,8 @@
 # SOP — When an approved rule breaks
 
-**SunRise Solar · Owner: Hemayet Hossain · v1.1 — 29/08/2026**
-*(v1.0 25/08/2026 · v1.1 29/08 — the delivery instruction was unexecutable; see
-"Where to send it")*
+**SunRise Solar · Owner: Hemayet Hossain · v1.2 — 21/09/2026**
+*(v1.0 25/08/2026 · v1.1 29/08 — delivery failure identified ·
+v1.2 21/09 — current recipient, channel access and response evidence clarified)*
 
 **Scope:** one page. What to do the moment a rule someone signed off stops working
 against real data.
@@ -70,53 +70,56 @@ change is irreversible, wait for the reply.
 
 ## Where to send it
 
-> **v1.0 said: _"Post it where the approver will see it. In this org that is Chatter on
-> the record or the ticket."_ That instruction has never been executable, and it took
-> four weeks and six documents to notice.**
+The 29/08 review found that the original instruction to post on a record
+or ticket did not provide a working route to the intended approver.
+CF-22 retains that historical evidence and the subsequent channel repair.
 
-**Marcus has no user account in this org.** Neither do Jake, Sarah or Zara. There are
-also **no Chatter groups** — none, not one. The only people who can receive a Chatter
-post here are Ben Carter, Jack Nguyen, Mia Kelly and Priya Sharma, three of whom have
-never logged in.
+**Route reviewed 21/09/2026:** Marcus Neil (`005gK00007HBpc5QAD`)
+is active and belongs to SunRise Ops — Escalations
+(`0F9gK000000YDsTSAW`). Marcus Head is inactive.
+Use Marcus Neil's current account when selecting the mention.
 
-So every escalation written in Weeks 1 and 2 was addressed to a channel that could not
-reach its recipient, and each one read as delivered because it had a **"line to post
-now"** at the top.
+Marcus Neil's 01/09 reply to the consolidated decision list is recorded in
+[Decisions received](decisions-received-marcus.md). It establishes a
+response to that list, not receipt of every earlier or future message.
 
-### The rule that replaces it
+### Check the route before sending
 
-> **Before you write the line, confirm the recipient can receive it. Name the channel
-> in the note itself.**
+1. Confirm the intended recipient's current account and active status.
+2. Check access to the actual destination, including licence limitations
+   and private-group membership. An active account alone is insufficient.
+3. For Marcus, use the escalation group with a live mention of Marcus Neil.
+   Include the facts and decision request in the post itself; do not rely
+   on a business-record link as the only explanation.
+4. If that route is unavailable, confirm an alternative the recipient
+   actually uses. Record the chosen route and retain an audit copy in an
+   appropriate location with suitable access.
+5. Record posting separately from acknowledgement and approval.
+   A saved draft, group membership or successful post does not prove receipt.
+   For an irreversible change, wait for an explicit decision covering the
+   proposed action.
 
-One check, once per recipient, and it takes ten seconds:
+Recheck the route when sending, especially after account, licence or
+membership changes. The 01/09 repair shows why a one-time check is insufficient.
 
-1. **Setup → Users.** Is the approver there, and **Active**?
-2. If **yes** — Chatter on the record or the ticket, and @mention them. This is the
-   preferred route: it puts the message next to the data it is about, and it is visible
-   to whoever comes next.
-3. If **no** — Chatter is not a channel, it is a filing cabinet. **Send it by whatever
-   that person actually reads** (email, Teams, in person), and then **post the same text
-   to Chatter on the record anyway**, addressed to nobody.
+### What every status note must carry
 
-Step 3's second half is not busywork. Chatter is doing two jobs and only one of them
-needs the recipient to exist:
+Example for a new, unsent escalation:
 
-| Job | Needs a user account |
-|---|---|
-| **Reaching** the approver | Yes |
-| **Leaving the reasoning beside the record** for whoever opens it next | No |
+> **To:** Marcus Neil
+>
+> **Channel:** SunRise Ops — Escalations; live mention of Marcus Neil
+>
+> **Delivery:** Draft — not sent
+>
+> **Response/decision:** Awaiting reply
+>
+> **Audit reference:** Add the post link and any decision reference after sending.
 
-The audit trail is worth having even when the notification is impossible. What is not
-acceptable is doing the second and believing you did the first.
+Update the delivery status only after sending. Record the actual response
+and its scope separately; acknowledgement is not approval of a substitute rule.
 
-### What every status note must now carry
-
-Not *"the line to post now"* — that phrasing assumes the channel. Instead:
-
-> **To:** Marcus · **Channel:** email — *no user account in the org*
-> **Audit copy:** Chatter on `<record>`
-
-If the channel line cannot be filled in, the note is not finished.
+This SOP review made no Salesforce changes and sent no message.
 
 ## The second test
 

@@ -321,7 +321,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-01 | The customer-count freeze point passes today | W2 · 2.1 | ⚠️ **REOPENED 05/09 — the count is 48, a single number.** Sarah holds 41–51 from 02/09; 41 was never reachable | Marcus: tell Sarah |
 | CF-02 | Six bucket-C address confirmations due today | W2 · 2.1 | ✅ **CLOSED 05/09 — 6 of 6 confirmed.** All prompted, all matched the record; no address changed. **Document corrected 07/09** — it still read `OPEN · 0 of 6`. **List-view follow-up: CF-26 fixed and administrator-verified 17/09; other-user access untested** | — |
 | CF-21 | Open-task visibility — report built | W2 · CF-01 | ✅ **DONE 27/08** | — |
-| CF-22 | Every escalation was addressed to a channel that cannot reach anyone | W1–W2 | ✅ **DONE 29/08** — channel built, six notes sent | — |
+| CF-22 | Every escalation was addressed to a channel that cannot reach anyone | W1–W2 | ✅ **Channel built 29/08; repaired and recipient response recorded 01/09.** Account, group membership and reply checked 21/09; see CF-22. | — |
 | CF-03 | Licence decision — Salesforce is 4 of 4 | W1 · 1.1 | ✅ **ANSWERED 01/09 — buy three.** Priya waits to October | Purchase |
 | CF-04 | Who inherits the 666 unowned Opportunities | W2 · 2.3 | ✅ **CUSTODY EXECUTED 02/09** — 666 moved, declared | Jake's licence day |
 | CF-05 | Stale-pipeline threshold: 30 days or 14 | W2 · 2.3 | ✅ **30 DAYS — report done 01/09** | Align the 2.3 doc |
@@ -463,6 +463,30 @@ is the more useful thing to notice.
 ---
 
 ## CF-22 — Every escalation was addressed to a channel that cannot reach anyone
+
+**Documentation review 21/09/2026:** The channel was built on 29/08,
+but that setup did not establish recipient receipt. The build log records
+a second failure: Marcus Head was deactivated and removed from the group,
+while the existing posts still mentioned that account. Marcus Neil was
+added and a new live mention was posted on 01/09.
+
+Read-only queries confirm Marcus Head is inactive and Marcus Neil
+(`005gK00007HBpc5QAD`) is active on a Chatter Free licence.
+Marcus Neil's reply (`0D7gK000000CH3VSAW`), dated
+01/09/2026 at 04:16:27 UTC, answers the eight-item decision list.
+Its parent post (`0D5gK00000Uwb5ySAB`) belongs to
+SunRise Ops — Escalations (`0F9gK000000YDsTSAW`).
+
+Current group membership is Hemayet Hossain (Admin), Marcus Neil,
+Sarah Cooper and Jake Mathewson (Standard members).
+This confirms membership and a recorded response to the decision list;
+it does not prove that every earlier escalation was read or that all
+subsequent decisions are resolved.
+
+The account and channel statements below describe the historical
+29/08 position. They are retained as historical evidence, not current
+routing instructions. This review made no Salesforce changes and sent
+no message.
 
 **Raised 29/08 · Found while writing click-by-click steps to post CF-03 to Marcus**
 
