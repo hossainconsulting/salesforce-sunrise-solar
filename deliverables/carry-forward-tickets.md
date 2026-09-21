@@ -1178,7 +1178,27 @@ The original 134-of-137 duplicate count is a pre-merge finding, not a
 current count. Ticket 2.1's Account merges were separate from this
 Contact work.
 
-## CF-14 — Week 1 evidence was never captured
+## CF-14 — Week 1 evidence recovered; missing-evidence claim corrected
+
+**CORRECTED 01/09/2026 — documentation reviewed 21/09.**
+
+Seven screenshots are tracked in
+[evidence/week-01/screenshots-19-08/](../evidence/week-01/screenshots-19-08/).
+Commit `aa595ba` records their addition on 01/09. The correction below
+identifies them as the recovered 19/08 evidence. The later CSV captures
+remain separate from those original screenshots.
+
+The register already records this correction. This review checked the
+tracked file list and commit history; it did not independently verify
+image contents or capture timestamps, or perform live Salesforce checks.
+
+### Historical account — original finding and 01/09 correction
+
+The original finding below was superseded by the 01/09 correction.
+References to "today" describe the dates of those earlier entries.
+Historical interpretations below were not independently revalidated
+by this documentation review.
+
 
 **Closed today, partially.** `evidence/week-01/` contained nothing but `.gitkeep`.
 
