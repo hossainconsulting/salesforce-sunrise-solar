@@ -318,7 +318,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 
 | # | Ticket | From | Status | Blocked on |
 |---|---|---|---|---|
-| CF-01 | The customer-count freeze point passes today | W2 · 2.1 | ⚠️ **REOPENED 05/09 — the count is 48, a single number.** Sarah holds 41–51 from 02/09; 41 was never reachable | Marcus: tell Sarah |
+| CF-01 | Customer-count revision and delivery to Sarah | W2 · 2.1 | **48-household revision posted 05/09; posting verified 21/09.** The group post directly addresses Sarah and distinguishes households from Account records. | Sarah's receipt remains unverified; no comments returned on the two checked posts |
 | CF-02 | Six bucket-C address confirmations due today | W2 · 2.1 | ✅ **CLOSED 05/09 — 6 of 6 confirmed.** All prompted, all matched the record; no address changed. **Document corrected 07/09** — it still read `OPEN · 0 of 6`. **List-view follow-up: CF-26 fixed and administrator-verified 17/09; other-user access untested** | — |
 | CF-21 | Open-task visibility — report built | W2 · CF-01 | ✅ **DONE 27/08** | — |
 | CF-22 | Every escalation was addressed to a channel that cannot reach anyone | W1–W2 | ✅ **Channel built 29/08; repaired and recipient response recorded 01/09.** Account, group membership and reply checked 21/09; see CF-22. | — |
@@ -350,6 +350,34 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 # 🔴 Due now
 
 ## CF-01 — The customer-count freeze point passes today
+
+**Review 21/09/2026 — revision posting verified; receipt unverified.**
+
+The completed CF-20 confirmations establish 48 households within the
+historical set of 51 Account records: seven pairs are separate households
+and three pairs represent the same household. The household count does
+not depend on executing the three merges. Remaining merge decisions
+are tracked under CF-19. This review did not recount current Accounts.
+
+The read-only FeedItem query verified group post
+`0D5gK00000VRUD3SAP`, created by Hemayet Hossain on 05/09/2026
+at 10:23:59 UTC in SunRise Ops — Escalations. Its body directly
+addresses Sarah Cooper, replaces the 41–51 range with 48 households,
+and explains why the org still held 51 Account records at that time.
+
+The corresponding Kowalski audit copy is `0D5gK00000VRUD4SAP`,
+created at the same timestamp. A FeedComment query on those two posts
+returned zero comments. This establishes posting, not a working mention
+notification, reading or acknowledgement. Replies elsewhere and other
+communication channels were not checked.
+
+The earlier instruction for Marcus to tell Sarah is superseded by the
+verified post addressing her directly. Receipt remains unverified.
+
+This review changed no Salesforce records and sent no message.
+
+### Historical position — 27/08/2026
+
 
 **From:** Ticket 2.1 · **Owner:** Hemayet · **Due: COB today, 27/08/2026**
 
