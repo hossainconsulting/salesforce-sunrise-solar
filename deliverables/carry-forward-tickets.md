@@ -332,7 +332,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
 | CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | **DRAFT READY 18/09 — not sent** | Hemayet to send |
 | CF-12 | Jack and Mia's sales role assignments | W1 · 1.1 | ✅ **COMPLETE 17/09 — assignments verified through UI and SOQL.** Jack: Sydney Sales Team; Mia: Newcastle Sales Team. See [verification details](cf-12-role-verification.md). | Broader hierarchy redesign tracked under CF-15; visibility and forecasting untested |
-| CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
+| CF-13 | Contact duplicates — approved merges completed; address conflicts held | W2 · 2.2 | **PARTIAL — 16 groups merged 01/09; Contacts 137 → 98. Bucket B: 21 groups held; decision pending in the 07/09 record.** | Marcus: disposition of held address-conflict groups |
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
 | CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
 | CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
@@ -1122,113 +1122,61 @@ This review reconciled existing documentation. It did not rerun
 live checks, change Salesforce configuration or send a message.
 
 
-## CF-13 — 134 of 137 Contacts are unmerged duplicates
+## CF-13 — Contact merges completed; address-conflict groups held
 
-**Re-scoped 29/08. The original ticket had the premise wrong and the size wrong.**
+**PARTIAL — approved merges completed 01/09/2026; documentation reviewed 21/09.**
 
-> **As written, this ticket said:** *"Contact and Lead still run stock rules only… Ticket
-> 2.1 merged Contact duplicates too, so the same argument almost certainly applies and has
-> simply never been made."*
->
-> **Both halves are false.** `merge-log.md` contains **no occurrence of the word
-> "contact"** — Ticket 2.1 never touched the object. The three hits in the 2.1 audit are
-> the English word (*"at the next contact with that customer"*). And it is not a rules
-> problem: **the stock Contact rule is already active** with Alert + Report.
+### Completed: Bucket A
 
-### What the org actually says
+Marcus approved merging 16 phone-only conflict groups and holding the
+21 address-conflict groups. See [recorded decisions](decisions-received-marcus.md).
 
-| | |
-|---|---|
-| Contacts | **137** |
-| Distinct emails among them | **40** |
-| Contacts sitting in duplicate groups | **134 — about 97%** |
-| Duplicate groups | **37**, most of them 4 records |
-| Contacts merged by Ticket 2.1 | **0** |
-| Duplicate Record Sets in the queue | **0** |
+The [build log](build-log.md) records Hemayet executing the approved merges
+on 01/09 after a successful dry run: Contacts fell from 137 to 98,
+with 39 records removed across 16 groups in 23 merge operations.
 
-A representative group — identical name, identical email, same parent Account, created
-**the same second** by the 17/08 seed load, differing only in phone:
+Recorded post-merge checks found no remaining Bucket A groups,
+21 Bucket B groups still held, 16 survivors carrying the discarded-phone
+note, 140 Cases and zero orphaned Cases. The phone notes explicitly
+identified the survivor choice as arbitrary.
 
-```
-Joshua Patel  joshua.patel682@example.com  (02) 4754 1806  Joshua Patel Residence
-Joshua Patel  joshua.patel682@example.com  (02) 5914 3046  Joshua Patel Residence
-Joshua Patel  joshua.patel682@example.com  (02) 7074 4286  Joshua Patel Residence
-Joshua Patel  joshua.patel682@example.com  (02) 8234 5526  Joshua Patel Residence
-```
+Evidence:
+[pre-merge snapshot](../evidence/week-02/cf-13-pre-merge.csv) and
+[post-merge snapshot](../evidence/week-02/cf-13-post-merge.csv).
+The [03/09 session](sessions/2026-09-03.md) records checking the CSV
+counts as 137 and 98 exactly.
 
-### Why the active rule caught none of them
+The Contact duplicate report was also built, renamed to
+`CF13_Contact_Duplicates_By_Email`, retrieved and committed, as recorded
+in the build log.
 
-**Duplicate rules only fire on create and edit. They never scan data that already
-exists.** These 134 were bulk-loaded on 17/08 and the rule has had nothing to react to
-since. The queue reads 0 and the object looks clean.
+### Open: Bucket B
 
-**This is the 2024 Account failure exactly**, on an object nobody has opened — except
-that in 2024 Salesforce at least *flagged* the duplicates and they went unread. Here
-nothing was ever flagged, so there is not even a list to ignore.
+The [05/09 handover](sessions/2026-09-05.md) records 21 held groups
+containing 79 Contacts with mailing-address conflicts, with the decision
+posted to Marcus. The [07/09 session](sessions/2026-09-07.md) still lists
+that decision as pending, with a fallback of carrying the held groups
+forward on Friday 11/09.
 
-### Lead needs nothing — do not build a rule for it
+Completion of the CF-02 and CF-20 calls does not itself establish
+Contact-level address resolution or authorise Bucket B merges.
+Confirm any subsequent decision and the address evidence for the held
+groups before proposing further merges.
 
-**Zero Lead duplicates on email. Zero on phone.** Across 150 Leads. Building a Lead
-duplicate rule would be inventing a rule against no evidence, which is the precise
-substitution [ticket-2.1-data-quality-audit.md](ticket-2.1-data-quality-audit.md) §③ and
-§④ already record as the mistake. **The original ticket's "the same argument almost
-certainly applies" was an assumption, and the data does not support it.**
+This documentation review did not establish a later Bucket B decision
+or verify the current org counts. It performed no live checks, merges,
+Salesforce configuration changes or message sending.
 
-### Blocked — and this is the first time CF-22 has blocked build work
+### Historical proposal
 
-Merging 134 records needs a survivorship rule: which record survives, and what happens to
-the four different phone numbers in each group — the Account merge lost addresses exactly
-this way and produced CF-02. Under
-[sop-escalating-rule-changes.md](sop-escalating-rule-changes.md) that rule goes to Marcus
-**before** anything irreversible happens.
+The [29/08 survivorship proposal](cf-13-contact-merge-rule.md) explains
+the original match key, tests and two-bucket approach. Its statements
+that approval was pending and nothing had been merged describe that
+earlier date; the 01/09 execution supersedes them for Bucket A.
 
-**Marcus has no channel — see CF-22.** Until now that blocked reporting and escalation.
-**It now blocks a merge affecting 134 records.**
-
-**Evidence:** [`evidence/week-02/cf-13-contact-duplicates.csv`](../evidence/week-02/cf-13-contact-duplicates.csv)
-(all 137, sorted by email so the groups read at a glance) and
-[`evidence/week-02/cf-13-leads-no-duplicates.csv`](../evidence/week-02/cf-13-leads-no-duplicates.csv)
-(all 150 Leads — kept as the evidence for *not* building a rule, which is the harder
-thing to prove later).
-
-**Safe to do meanwhile, no approval needed:** build `CF-13 Contact duplicates by email` —
-a Contacts summary report grouped by Email, in SunRise Ops, alongside CF-01's. It reads
-40 groups over 137 records. **Surfacing them is not merging them**, and the read-side is
-what was missing in 2024.
-
-### Update 29/08 — the rule is written and tested. Nothing merged.
-
-**[cf-13-contact-merge-rule.md](cf-13-contact-merge-rule.md)** — awaiting Marcus.
-
-**The obvious survivorship rule was tested and it failed.** "The record with the most
-Cases" gives a **unique winner in 4 groups and ties in 33 of 37.** That is Ticket 2.1's
-*"most recent won Opportunity"* failure repeating — **except the test ran before the rule
-went to Marcus this time, not after he approved it.** That is the first time
-[sop-escalating-rule-changes.md](sop-escalating-rule-changes.md) has done the job it was
-written for.
-
-**And it turned out not to matter:** Salesforce reparents child records to the survivor
-on merge, so all **140 Cases** follow whichever Contact wins. The Cases were never at
-risk. The rule therefore declares the survivor choice **arbitrary** rather than dressing
-record age up as evidence — which is the mistake CF-02 records.
-
-**What is at risk is what differs:** **37 of 37 groups differ on phone, 21 of 37 differ
-on mailing address.**
-
-| Bucket | Groups | Action |
-|---|---|---|
-| **A** — phone conflict only | 16 | **Merge.** Discarded phones written to the survivor's Description first |
-| **B** — mailing address conflict | **21** | **HOLD.** Same reasoning as CF-20 |
-
-Bucket B is CF-02 before it happens. Six accounts carry an unconfirmed-address flag today
-because record age picked an address the org can no longer recover. **Repeating that on
-21 groups to finish a merge faster is not a trade worth making** — and it is Marcus's to
-refuse, not the admin's to take.
-
-> **A pattern worth naming: three separate holds now wait on customer contact that nobody
-> is rostered to make** — CF-02's six addresses, CF-20's ten pairs, and CF-13 Bucket B's
-> twenty-one groups. That is one job for one person, currently filed as three tickets
-> that each wait quietly.
+The original 134-of-137 duplicate count is a pre-merge finding, not a
+current count. Ticket 2.1's Account merges were separate from this
+Contact work.
 
 ## CF-14 — Week 1 evidence was never captured
 

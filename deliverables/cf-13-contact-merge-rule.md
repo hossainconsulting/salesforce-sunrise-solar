@@ -1,7 +1,19 @@
 # CF-13 — Contact merge: the survivorship rule, for approval
 
 **SunRise Solar · Org `sunrise` · 29/08/2026 · Owner: Hemayet Hossain**
-**Status: PROPOSED. Nothing has been merged.**
+**Status update — documentation reviewed 21/09/2026:** Marcus approved
+merging Bucket A and holding Bucket B. The build log records execution
+on 01/09: 16 groups merged, Contacts 137 → 98, and 21 address-conflict
+groups held. The 05/09 handover counted 79 Contacts in those held groups;
+the 07/09 session still listed their disposition as awaiting Marcus.
+
+See [CF-13's reconciled status](carry-forward-tickets.md#cf-13--contact-merges-completed-address-conflict-groups-held)
+for execution evidence and remaining work. No live checks or further
+merges were performed for this documentation review.
+
+**Historical proposal — 29/08/2026:** The approval request below is
+preserved as written. Its pending-approval language, estimates and
+“nothing merged” statements describe the position before 01/09.
 
 ---
 
