@@ -324,7 +324,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-22 | Every escalation was addressed to a channel that cannot reach anyone | W1–W2 | ✅ **Channel built 29/08; repaired and recipient response recorded 01/09.** Account, group membership and reply checked 21/09; see CF-22. | — |
 | CF-03 | Licence decision — Salesforce is 4 of 4 | W1 · 1.1 | ✅ **ANSWERED 01/09 — buy three.** Priya waits to October | Purchase |
 | CF-04 | Who inherits the 666 unowned Opportunities | W2 · 2.3 | ✅ **CUSTODY EXECUTED 02/09** — 666 moved, declared | Jake's licence day |
-| CF-05 | Stale-pipeline threshold: 30 days or 14 | W2 · 2.3 | ✅ **30 DAYS — report done 01/09** | Align the 2.3 doc |
+| CF-05 | Stale-pipeline threshold — 30 days approved | W2 · 2.3 | ✅ **COMPLETE — report updated 01/09; documentation aligned 18/09.** See [Ticket 2.3](ticket-2.3-pipeline-hygiene-report.md). Historical figures retain their snapshot dates. | — |
 | CF-06 | Confirm Block-on-create for duplicate accounts | W2 · 2.2 | ✅ **DONE 01/09 — keep blocking** | — |
 | CF-07 | Monday duplicate-queue review — Jake assigned; interim coverage | W2 · 2.2 | **HANDOVER PENDING — reviewed 21/09.** Marcus assigned Jake on 01/09; Jake remains on Chatter Free. Hemayet's read-only check returned 0 Duplicate Record Sets on 21/09. | Jake's Salesforce access and verified handover; recurring review evidence |
 | CF-08 | ~~Four~~ **Three** unwritten sections in the provisioning SOP *(§7 closed by CF-09)* | W1 · 1.1 | 🟠 BLOCKED | Hemayet |
@@ -879,6 +879,28 @@ one Newcastle rep.
 ---
 
 ## CF-05 — Stale-pipeline threshold: 30 days or 14
+
+**Review 21/09/2026 — recorded implementation and documentation complete.**
+
+Marcus selected 30 days on 01/09. The
+[execution record](decisions-received-marcus.md#cf-05--executed-0109)
+documents the report-filter change that day and the documentation
+alignment completed on 18/09.
+
+[Ticket 2.3](ticket-2.3-pipeline-hygiene-report.md) now uses the approved
+30-day threshold in its triage summary and detailed recommendations.
+Its 56-row totals describe the 26/08/2026 snapshot, not current pipeline
+results. The earlier 14-day split is superseded.
+
+The register's outstanding "Align the 2.3 doc" action is therefore
+complete. The Monday subscription dependency recorded in the decision
+log remains separate from this threshold decision.
+
+This review checked existing documentation. It did not rerun the live
+report, verify subscription delivery, change Salesforce or send a message.
+
+### Historical threshold comparison — before the 01/09 decision
+
 
 **From:** Ticket 2.3
 
