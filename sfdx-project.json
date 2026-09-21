@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "sunrise-solar-internship",
+  "name": "salesforce-sunrise-solar",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "67.0"
