@@ -326,7 +326,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-04 | Who inherits the 666 unowned Opportunities | W2 · 2.3 | ✅ **CUSTODY EXECUTED 02/09** — 666 moved, declared | Jake's licence day |
 | CF-05 | Stale-pipeline threshold: 30 days or 14 | W2 · 2.3 | ✅ **30 DAYS — report done 01/09** | Align the 2.3 doc |
 | CF-06 | Confirm Block-on-create for duplicate accounts | W2 · 2.2 | ✅ **DONE 01/09 — keep blocking** | — |
-| CF-07 | Roster an owner for the duplicate queue | W2 · 2.2 | 🟠 **STILL BLOCKED — Jake exists and is reachable, but Chatter Free cannot open a Duplicate Record Set.** **Stopgap ran 07/09: Hemayet read the Monday queue, 0 sets** | CF-03 purchase |
+| CF-07 | Monday duplicate-queue review — Jake assigned; interim coverage | W2 · 2.2 | **HANDOVER PENDING — reviewed 21/09.** Marcus assigned Jake on 01/09; Jake remains on Chatter Free. Hemayet's read-only check returned 0 Duplicate Record Sets on 21/09. | Jake's Salesforce access and verified handover; recurring review evidence |
 | CF-08 | ~~Four~~ **Three** unwritten sections in the provisioning SOP *(§7 closed by CF-09)* | W1 · 1.1 | 🟠 BLOCKED | Hemayet |
 | CF-09 | The freeze-vs-deactivate paragraph | W1 · 1.2 | ✅ **WRITTEN 02/09** — SOP now v1.2 | — |
 | CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
@@ -907,6 +907,42 @@ Marcus owns the trade, not Hemayet. **Reversible to alert in one deploy.**
 ---
 
 ## CF-07 — Roster an owner for the duplicate queue
+
+**Review 21/09/2026 — interim queue check completed; handover pending.**
+
+Marcus assigned Jake the Monday duplicate-queue review, ten minutes
+weekly, on 01/09. See [decisions received](decisions-received-marcus.md).
+The ownership decision is recorded; the historical proposal below
+has been superseded.
+
+The read-only User query on 21/09 returned Jake Mathewson
+(`005gK00007VGhKTQA1`) as active, with the Chatter Free User profile
+and Chatter Free licence. This does not establish the Salesforce
+access needed for the assigned review. No access test as Jake or
+completed handover was verified.
+
+Hemayet ran `SELECT COUNT() FROM DuplicateRecordSet` against `sunrise`
+on Monday 21/09. The query succeeded and returned a count of zero.
+This records today's interim queue check; it does not establish
+that all underlying records are free of duplicates or that duplicate
+rules are operating correctly. Rule configuration was not rechecked.
+
+The [7 September session](sessions/2026-09-07.md) records the earlier
+interim check, also with zero sets. The search of session notes and
+the build log found no matching record of a 14 September check.
+That check remains unverified; absence of a matching note does not
+prove it was missed.
+
+CF-07 remains open for Jake's access and verified handover.
+Each interim Monday review needs its own dated evidence; today's
+empty result does not establish continuous weekly coverage.
+
+This review changed no Salesforce records or configuration and sent
+no message.
+
+### Historical position — before the 01/09 ownership decision
+
+
 
 **From:** Ticket 2.2 · **The control that actually failed in 2024**
 
