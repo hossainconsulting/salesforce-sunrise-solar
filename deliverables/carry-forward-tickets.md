@@ -1021,18 +1021,28 @@ This closes the documentation task. It does not establish that every
 existing user meets the SOP or that its steps were newly tested.
 This review changed no Salesforce configuration and sent no message.
 
-
 ## CF-09 — The freeze-vs-deactivate paragraph
 
-**File:** [sop-user-deactivation.md](sop-user-deactivation.md) §"Freeze vs. deactivate"
+**COMPLETE 02/09/2026 — documentation reviewed 21/09.**
 
-**This is the highest-value item in the group.** That SOP went to **v1.1** on 26/08 with
-a substantial new owned-records gate — and still carries a blank in the section the
-Week 1 brief calls *"the part that shows whether you understand access management or
-just know where the buttons are."*
+**File:** [sop-user-deactivation.md](sop-user-deactivation.md),
+“Freeze vs. deactivate — read this before you touch anything”.
 
-The reasoning now exists in the org's own history — EPIC's 247 orphaned records are the
-worked example. The paragraph is easier to write today than it was on the 19th.
+The SOP's v1.2 header, dated 02/09/2026, records that the SOP owner
+wrote the freeze-versus-deactivate paragraph and closed CF-09.
+The section is present; the earlier statement that it remained
+blank is superseded.
+
+The explanation distinguishes the immediate access decision from
+completion of offboarding and uses the recorded EPIC incident to
+explain the importance of resolving ownership before deactivation.
+The owned-records gate was introduced separately in v1.1 on 26/08.
+
+This closes the paragraph-writing task. This review checked the
+existing document; it did not validate every SOP instruction,
+rerun the ownership gate, test login or licence behaviour, change
+Salesforce configuration or send a message.
+
 
 ## CF-10 — Dormant-user review: the send decision
 
