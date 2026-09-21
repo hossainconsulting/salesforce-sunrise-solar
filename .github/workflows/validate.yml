@@ -1,0 +1,153 @@
+# Validates what is in force-app/ without ever deploying it.
+#
+# The guardrails job runs everywhere, with no credentials and no org. The
+# deploy dry-run job needs an authenticated org and is skipped, not failed,
+# when the SFDX_AUTH_URL secret is absent — so a fork or a fresh clone still
+# gets a green, meaningful check.
+#
+# To enable the dry-run:
+#   sf org display --target-org sunrise --verbose   # prints the Sfdx Auth Url
+# then paste that value into Settings → Secrets and variables → Actions →
+# New repository secret, named SFDX_AUTH_URL.
+#
+# That URL is a full credential — anyone holding it can log into the org. It
+# belongs in the secret store and nowhere else. Never paste it into a file,
+# a commit, an issue or a log.
+
+name: Validate
+
+on:
+  pull_request:
+    paths:
+      - 'force-app/**'
+      - 'sfdx-project.json'
+      - '.github/workflows/validate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'force-app/**'
+      - 'sfdx-project.json'
+      - '.github/workflows/validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  guardrails:
+    name: Repository guardrails
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # An sfdx auth URL is a full credential. The pattern is written as a
+      # character class so this file does not match itself.
+      - name: No sfdx auth URL in tracked files
+        run: |
+          if git grep -nI -e 'force:/[/]' -- .; then
+            echo "::error::An sfdx auth URL appears in a tracked file. It is a full credential — revoke it and rotate the org's connected app, deleting the line is not enough."
+            exit 1
+          fi
+          echo "No sfdx auth URLs in tracked files."
+
+      - name: No local CLI state committed
+        run: |
+          if git ls-files | grep -E '^\.sfdx?/'; then
+            echo "::error::.sf/ or .sfdx/ is tracked. It holds per-org state and cached credentials — see .gitignore."
+            exit 1
+          fi
+          echo "No .sf/ or .sfdx/ tracked."
+
+      - name: sfdx-project.json is valid and its package directories exist
+        run: |
+          jq -e . sfdx-project.json > /dev/null
+          jq -r '.packageDirectories[].path' sfdx-project.json | while read -r dir; do
+            if [ ! -d "$dir" ]; then
+              echo "::error file=sfdx-project.json::packageDirectories path '$dir' does not exist."
+              exit 1
+            fi
+            echo "Package directory '$dir' present."
+          done
+
+      - name: Retrieved metadata is well-formed XML
+        run: |
+          python3 - <<'PY'
+          import pathlib, sys, xml.etree.ElementTree as ET
+
+          files = sorted(pathlib.Path("force-app").rglob("*.xml"))
+          if not files:
+              print("No metadata XML under force-app/ yet — nothing to check.")
+              sys.exit(0)
+
+          bad = []
+          for path in files:
+              try:
+                  ET.parse(path)
+              except ET.ParseError as err:
+                  bad.append((path, err))
+                  print(f"::error file={path}::Malformed XML: {err}")
+
+          print(f"Checked {len(files)} metadata file(s); {len(bad)} malformed.")
+          sys.exit(1 if bad else 0)
+          PY
+
+  deploy-dry-run:
+    name: Deploy dry-run
+    needs: guardrails
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Are org credentials configured?
+        id: creds
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
+        run: |
+          if [ -n "$SFDX_AUTH_URL" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Report that the dry-run was skipped
+        if: steps.creds.outputs.available != 'true'
+        run: |
+          {
+            echo "### Deploy dry-run skipped"
+            echo
+            echo "No \`SFDX_AUTH_URL\` secret is configured, so there is no org to validate against."
+            echo "The guardrails job still ran and passed."
+            echo
+            echo "See the header of \`.github/workflows/validate.yml\` for how to enable this."
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Skipped: no SFDX_AUTH_URL secret configured."
+
+      - uses: actions/setup-node@v5
+        if: steps.creds.outputs.available == 'true'
+        with:
+          node-version: '22'
+
+      - name: Install Salesforce CLI
+        if: steps.creds.outputs.available == 'true'
+        run: npm install --global @salesforce/cli@2
+
+      - name: Authenticate to the org
+        if: steps.creds.outputs.available == 'true'
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
+        run: |
+          umask 077
+          auth_file="$RUNNER_TEMP/sfdx-auth-url"
+          trap 'rm -f "$auth_file"' EXIT
+          printf '%s' "$SFDX_AUTH_URL" > "$auth_file"
+          sf org login sfdx-url --sfdx-url-file "$auth_file" --alias ci --set-default
+
+      # --dry-run validates the deployment server-side and discards it.
+      # Nothing is written to the org.
+      - name: Validate the deployment
+        if: steps.creds.outputs.available == 'true'
+        run: sf project deploy start --dry-run --target-org ci --wait 30
