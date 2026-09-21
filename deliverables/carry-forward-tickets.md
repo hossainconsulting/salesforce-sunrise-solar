@@ -327,7 +327,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-05 | Stale-pipeline threshold — 30 days approved | W2 · 2.3 | ✅ **COMPLETE — report updated 01/09; documentation aligned 18/09.** See [Ticket 2.3](ticket-2.3-pipeline-hygiene-report.md). Historical figures retain their snapshot dates. | — |
 | CF-06 | Confirm Block-on-create for duplicate accounts | W2 · 2.2 | ✅ **DONE 01/09 — keep blocking** | — |
 | CF-07 | Monday duplicate-queue review — Jake assigned; interim coverage | W2 · 2.2 | **HANDOVER PENDING — reviewed 21/09.** Marcus assigned Jake on 01/09; Jake remains on Chatter Free. Hemayet's read-only check returned 0 Duplicate Record Sets on 21/09. | Jake's Salesforce access and verified handover; recurring review evidence |
-| CF-08 | ~~Four~~ **Three** unwritten sections in the provisioning SOP *(§7 closed by CF-09)* | W1 · 1.1 | 🟠 BLOCKED | Hemayet |
+| CF-08 | Provisioning SOP explanations completed | W1 · 1.1 | ✅ **COMPLETE 18/09 — sections 1, 3 and 4 written; v1.0 restored.** See [user-provisioning SOP](sop-user-provisioning.md). | — |
 | CF-09 | The freeze-vs-deactivate paragraph | W1 · 1.2 | ✅ **WRITTEN 02/09** — SOP now v1.2 | — |
 | CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
 | CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | **DRAFT READY 18/09 — not sent** | Hemayet to send |
@@ -980,6 +980,14 @@ Hemayet cannot roster Jake.
 
 # 🟠 Blocked on Hemayet — these cannot be ghost-written
 
+**Review 21/09/2026:** CF-08 was completed on 18/09; the provisioning
+SOP is v1.0 with sections 1, 3 and 4 written. The TODO counts and
+line references below describe the 03/09 position, not a current
+inventory. Other tickets retain their individually recorded statuses.
+
+### Historical TODO inventory — 03/09/2026
+
+
 ~~Seven~~ **Four** `✍️ TODO` markers remain across ~~four~~ **two** documents. They are
 marked *"write this in your own words"* by design: an SOP in someone else's voice is not
 yours to defend, and these are the paragraphs that show understanding rather than
@@ -991,13 +999,28 @@ button-knowledge.
 > `ticket-1.3-reply-to-zara.md` now carry none. The "seven across four" figure was written
 > 27/08 and had been true then.
 
-## CF-08 — ~~Four~~ Three unwritten sections in the provisioning SOP
+## CF-08 — Provisioning SOP explanations completed
 
-**File:** [sop-user-provisioning.md](sop-user-provisioning.md) §1, §3, §4
-*(§7 closed by CF-09 on 02/09 — heading and file reference corrected 03/09)*
+**COMPLETE 18/09/2026 — documentation reviewed 21/09.**
 
-The document was reversioned **v1.0 → v0.9 DRAFT** on 26/08 so it no longer *claims*
-to be finished. It goes back to v1.0 when these are written, not before.
+**File:** [sop-user-provisioning.md](sop-user-provisioning.md), sections
+1, 3 and 4; version v1.0 dated 18/09/2026.
+
+The completed explanations cover licence availability and suitability,
+Campaign access checks, and deliberate access selection with
+verification before handover. Section 4 uses Ben's documented
+provisioning experience; attribution to Sarah was not substantiated
+in the notes reviewed.
+
+The SOP's version history records its return to v0.9 DRAFT on 26/08
+and restoration to v1.0 on 18/09 after the outstanding sections were
+completed. The freeze-versus-deactivate explanation was completed
+separately under CF-09 on 02/09 and is linked from the SOP.
+
+This closes the documentation task. It does not establish that every
+existing user meets the SOP or that its steps were newly tested.
+This review changed no Salesforce configuration and sent no message.
+
 
 ## CF-09 — The freeze-vs-deactivate paragraph
 
