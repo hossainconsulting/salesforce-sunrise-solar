@@ -343,7 +343,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-23 | ~~23~~ **62 records owned by deactivated OrgFarm EPIC** — and it was 39 Flows nobody had counted | W2 · CF-04 | ✅ **CLOSED 02/09 · VERIFIED 03/09** — [sweep artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md): 185 of 187 confirmed zero, 2 unqueryable | — |
 | CF-24 | **None of Phase 0's three planted bugs exist** — and Week 4.2's was deleted by Ticket 1.1 | P0 · §0.8 | ✅ **PARTLY CLOSED 07/09 · verified in the org** — Weeks 5.1 and 10.1 planted the same evening. **Week 4.2's is unrecoverable** and becomes a build, not a staged diagnosis | — |
 | CF-26 | CF-02 address-confirmation list view — scope and filter corrected | W2 · CF-02 | **FIXED — administrator-verified 17/09.** All tasks scope; Subject contains "Confirm service address"; six matching tasks, all Completed. See [verification details](cf-26-list-view-verification.md). | Other-user record access remains untested |
-| CF-25 | **150 leads, $180,000 of campaigns, nobody contacted** | W4 · 4.1 | 🔴 **RAISED 07/09** — 69 days, all `Open - Not Contacted`, all owned by the admin | Marcus: who works them |
+| CF-25 | 150 unconverted Leads and six completed Campaigns — follow-up and attribution review | W4 · 4.1 | **OPEN — reviewed 21/09.** All 150 Leads remain admin-owned and Open - Not Contacted; six Campaigns record $180,000 ActualCost. Contact history and attribution were not verified. | Marcus: ownership, response time and disposition of existing Leads; linked CF-16 request drafted, not sent |
 
 ---
 
@@ -668,7 +668,44 @@ right for Ticket 1.1. **It was recorded correctly and connected to nothing.**
 
 ---
 
-## CF-25 — 150 leads, $180,000 of campaigns, and nobody contacted
+## CF-25 — Lead follow-up ownership and campaign attribution
+
+**Review 21/09/2026 — ownership and follow-up decisions remain open.**
+
+The read-only Lead query returned 150 unconverted records, all owned
+by Hemayet Hossain and all with status `Open - Not Contacted`.
+These fields establish recorded ownership and status, not whether
+contact occurred inside or outside Salesforce. Activity history and
+external contact records were not checked.
+
+The Campaign query returned six records, all `Completed`, with end
+dates on or before 30/06/2026. Their `ActualCost` values total $180,000.
+Each reports `NumberOfLeads = 25` and `NumberOfConvertedLeads = 0`.
+These campaign counters were not reconciled to individual Lead IDs
+or CampaignMember records.
+
+Opportunity campaign links, campaign influence and attributed revenue
+were not queried. This review therefore does not establish campaign
+ROI, zero revenue or the absence of attribution.
+
+The [CF-16 ownership review](cf-16-default-ownership-review.md) contains
+an unsent request covering inbound ownership, response time, backup
+coverage and whether the existing 150 Leads should be worked or
+written off. No new decision was verified in this review.
+
+The Week 4 brief also asks whether the Leads were worked outside
+Salesforce and what decision the campaign analysis must support.
+Those questions remain unresolved by the evidence reviewed here.
+
+### Historical finding — 07/09/2026
+
+The original narrative below is retained as historical context.
+Its 69-day age belongs to that date. Its categorical statements about
+contact, revenue and ROI are not established by this review; the
+evidence limits above apply.
+
+This review changed no Salesforce records or configuration and sent
+no message.
 
 **Raised 07/09 · The largest unworked pile yet, and the only one that cost cash**
 
