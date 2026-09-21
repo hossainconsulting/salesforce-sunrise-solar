@@ -4,6 +4,28 @@
 *Rewritten 05/09 against the finished result. An earlier draft said 47–51 with six pairs
 answered; all ten are now answered and the number is single.*
 
+**Review 21/09/2026 — historical note; posting verified.**
+
+The group revision was posted on 05/09/2026 at 10:23:59 UTC:
+`FeedItem 0D5gK00000VRUD3SAP`. Unlike the proposed wording below,
+the actual post directly addresses Sarah with the 48-household revision.
+Its audit copy is `0D5gK00000VRUD4SAP`.
+
+No comments were returned on either post in this review. Notification,
+reading and acknowledgement remain unverified; other channels were
+not checked.
+
+The 48-household figure follows from the completed confirmations;
+merging the three duplicate pairs changes the Account record count,
+not the household count. The original wording below saying "once the
+merges run" conflates those two measures.
+
+The original note remains dated 05/09. Its proposed asks and licence
+statements are historical, not a current status report.
+This review changed no Salesforce records and sent no message.
+
+
+
 | | |
 |---|---|
 | **To** | Marcus |
