@@ -301,7 +301,7 @@ searching by name. Backlog, not a fix for this ticket.
 
 1. **Reassign the 42 ownerless Opportunities ($515,584)** before triage — 15 of them
    from a user who was deactivated a week ago.
-2. 2. **Resolved 01/09/2026:** Marcus selected 30 days as the single
+2. **Resolved 01/09/2026:** Marcus selected 30 days as the single
    standing threshold. Documentation aligned on 18/09/2026.
 3. **Jake needs a user account.** Until then the weekly nag cannot reach him. Fourth
    item blocked on the Week 1 licence decision.
