@@ -331,7 +331,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-09 | The freeze-vs-deactivate paragraph | W1 · 1.2 | ✅ **WRITTEN 02/09** — SOP now v1.2 | — |
 | CF-10 | Dormant-user review: the send decision | W1 · 1.2 | **DRAFT READY 18/09 — send decision pending** | Hemayet |
 | CF-11 | Zara's reply: the three-sentence version | W1 · 1.3 | **DRAFT READY 18/09 — not sent** | Hemayet to send |
-| CF-12 | Jack and Mia have no role | W1 · 1.1 | 🟡 READY | — |
+| CF-12 | Jack and Mia's sales role assignments | W1 · 1.1 | ✅ **COMPLETE 17/09 — assignments verified through UI and SOQL.** Jack: Sydney Sales Team; Mia: Newcastle Sales Team. See [verification details](cf-12-role-verification.md). | Broader hierarchy redesign tracked under CF-15; visibility and forecasting untested |
 | CF-13 | **134 of 137 Contacts are unmerged duplicates** *(re-scoped 29/08)* | W2 · 2.2 | ✅ **MERGED 01/09 — 137 → 98.** 21 groups held | — |
 | CF-14 | ~~Week 1 evidence was never captured~~ **It was — and was declared lost unread** | W1 | ✅ **CORRECTED 01/09** | — |
 | CF-15 | Role hierarchy redesign | W1 · 1.1 | **REQUIREMENTS NEEDED 18/09 — request drafted, not sent** | Marcus: structure and access requirements; Hemayet to send |
@@ -1081,19 +1081,36 @@ update changed no Salesforce configuration or records.
 
 # 🟡 Ready — actionable, no decision needed
 
-## CF-12 — Jack and Mia have no role
+## CF-12 — Jack and Mia's sales role assignments
 
-**Verified today:** `UserRole` is null for both. Ben Carter has *Newcastle Sales Team*;
-Jack and Mia have nothing, despite both holding a Salesforce licence and the title
-*Sales Representative*.
+**COMPLETE 17/09/2026 — documentation reviewed 21/09.**
 
-**Consequence:** no role means their records roll up to nobody. Any future
-forecast-by-manager, sharing rule or role-based report silently excludes 442
-Opportunities.
+Phase 0 section 0.5 identifies Jack Nguyen as the Sydney sales
+representative and Mia Kelly as the Newcastle sales representative.
+The office assignments were therefore established in the recorded
+requirements.
 
-**Not done unilaterally** because the right role depends on which office they belong to,
-and that is a one-line answer from Marcus rather than a guess — but the moment it is
-known this is a two-minute change.
+On 17/09, Sydney Sales Team was created under Director, Direct Sales
+and assigned to Jack. Mia was assigned to the existing Newcastle
+Sales Team; Ben Carter remained there. UI and SOQL checks verified
+all three users as active with the expected roles.
+
+See [CF-12 verification details](cf-12-role-verification.md).
+Sydney and Newcastle role metadata were retrieved; user assignments
+must be applied separately when reproducing the configuration.
+
+This completes the role-assignment task for Jack and Mia. It does
+not establish record visibility or forecasting behaviour, which
+were not tested. Manager fields were not changed. The broader
+hierarchy redesign remains open under CF-15.
+
+The earlier statement that their missing roles necessarily excluded
+442 Opportunities from future sharing, reporting or forecasting
+was not established by the recorded verification.
+
+This review reconciled existing documentation. It did not rerun
+live checks, change Salesforce configuration or send a message.
+
 
 ## CF-13 — 134 of 137 Contacts are unmerged duplicates
 
