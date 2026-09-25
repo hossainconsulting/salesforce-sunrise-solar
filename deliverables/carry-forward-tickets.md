@@ -338,7 +338,7 @@ a note dated 27/08 saying "today" means 27/08, and rewriting that would falsify 
 | CF-16 | Default ownership and automation-user review | W1 · 1.1 | **OWNERSHIP DECISIONS NEEDED 18/09 — request drafted, not sent** | Marcus: ownership and coverage; Hemayet to send |
 | CF-17 | Placeholder Manager assignments for four users | W1 · 1.1 | **DEFERRED — verified 18/09; Manager decisions needed** | Marcus: confirm Manager assignments; linked CF-15 request not sent |
 | CF-18 | Marketing Campaign Access permission set | W1 · 1.3 | **DEFERRED — verified 18/09; licence dependency remains** | CF-03 |
-| CF-19 | 47 accounts still violate the naming standard | W2 · 2.2 | **DEFERRED — verified 18/09; three Account merges pending** | Marcus: survivorship decisions for Kowalski, Bennett and Young |
+| CF-19 | Legacy naming corrections and remaining Account merges | W2 · 2.2 | **PARTIAL 25/09 — 47 renames verified; three merges remain pending** | Marcus: survivorship decisions for Kowalski, Bennett and Young |
 | CF-20 | Ten middle-initial pairs, held for confirmation | W2 · 2.1 | ✅ **CLOSED 05/09 — all 10 answered, 3 days early.** 7 separate, 3 same household. **All 20 task records corrected 07/09** — they still asserted the phone-format evidence, which finished **3 for 10**. Merging on it would have been wrong 7 times | — |
 | CF-23 | ~~23~~ **62 records owned by deactivated OrgFarm EPIC** — and it was 39 Flows nobody had counted | W2 · CF-04 | ✅ **CLOSED 02/09 · VERIFIED 03/09** — [sweep artifact](../evidence/week-03/cf-23-ownership-sweep-03-09.md): 185 of 187 confirmed zero, 2 unqueryable | — |
 | CF-24 | **None of Phase 0's three planted bugs exist** — and Week 4.2's was deleted by Ticket 1.1 | P0 · §0.8 | ✅ **PARTLY CLOSED 07/09 · verified in the org** — Weeks 5.1 and 10.1 planted the same evening. **Week 4.2's is unrecoverable** and becomes a build, not a staged diagnosis | — |
@@ -1358,6 +1358,26 @@ was not tested, and no message was sent.
 
 
 ## CF-19 — 47 accounts still violate the naming standard
+
+**Update 25/09/2026 — naming corrections complete; ticket remains open for merges.**
+
+The active rule `Account_Name_No_Residence` supplied the explicit person-only
+standard. Codex applied 47 suffix removals in `sunrise`; an independent query
+verified every target name, zero remaining names containing `residence`, and
+51 unchanged Account IDs. Four unaffected accounts retained their names and
+modification timestamps. The validation rule remained active and unchanged.
+See [execution and publication evidence](../evidence/2026-09-25/cf19-naming-correction/README.md).
+
+The operation occurred before this repository's 18/09 sequencing instruction
+was recovered: that instruction called for survivorship and merges before
+renaming. The name changes did not merge records or settle survivorship.
+This is a recorded sequencing deviation, not evidence that the merge blocker
+was cleared. The private original-name/ID mapping is retained locally for
+traceability. Kowalski, Bennett and Young still require the recorded decisions
+and merge work. **Do not close CF-19 on the naming verification alone.**
+
+The earlier review below is retained as a historical snapshot; its statement
+that no Accounts were renamed describes 18/09, not the current state.
 
 **Verified 18/09/2026: Deferred pending the remaining Account merges.**
 
