@@ -1,0 +1,2 @@
+/sanitise-check.sh text eol=lf
+/scripts/test-sanitise-check.sh text eol=lf

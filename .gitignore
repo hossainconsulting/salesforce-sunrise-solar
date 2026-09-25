@@ -63,5 +63,5 @@ unreviewed/
 
 # --- Review artifacts produced by sanitise-check.sh -------------------
 # These are build products, not evidence; do not publish them.
-# The script itself is not currently present in this repository.
+# Run ./sanitise-check.sh to generate a fresh private review directory.
 .sanitise-review/
