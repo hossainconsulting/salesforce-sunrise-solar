@@ -20,6 +20,7 @@ Twelve weeks as the incoming admin at a 47-person NSW solar installer whose org 
 | `seed/` | Apex scripts that build the starting data, including its deliberate defects |
 | `deliverables/` | The written work: design docs, SOPs, analyses, runbooks |
 | `evidence/` | Before/after screenshots and test results per phase |
+| `reference/` | Reusable working material that is not a deliverable — e.g. NotebookLM prompts for studying PDFs |
 
 `deliverables/` is the substance. The configuration proves the clicks happened;
 the documents prove the thinking did.
