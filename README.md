@@ -87,7 +87,7 @@ OpenAI Codex assisted with documentation drafting, evidence review, and
 implementation guidance. Hemayet Hossain reviewed the work and executed
 the Salesforce and Git operations.
 
-Anthropic Claude Code also assisted with documentation, evidence write-ups and
+Anthropic Claude Code, AI-assisted contributor (Chief of Staff), also assisted with documentation, evidence write-ups and
 implementation guidance under Hemayet's direction. Commits it co-authored
 carry a `Co-Authored-By: Claude` trailer.
 
