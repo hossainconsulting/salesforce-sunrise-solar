@@ -83,6 +83,10 @@ OpenAI Codex assisted with documentation drafting, evidence review, and
 implementation guidance. Hemayet Hossain reviewed the work and executed
 the Salesforce and Git operations.
 
+Anthropic Claude Code also assisted with documentation, evidence write-ups and
+implementation guidance under Hemayet's direction. Commits it co-authored
+carry a `Co-Authored-By: Claude` trailer.
+
 ## Verified Salesforce credentials
 
 Hemayet Hossain holds four credentials verified through Salesforce's public credential record: Salesforce Certified Agentforce Specialist, Salesforce Certified Platform Administrator II, Salesforce Certified Platform App Builder, and Salesforce Certified Platform Administrator.
