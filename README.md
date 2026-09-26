@@ -79,6 +79,10 @@ Portfolio: [portfolio.hossainconsulting.com](https://portfolio.hossainconsulting
 
 ## AI assistance
 
+**OpenAI Codex** - AI-assisted contributor (Chief of Engineer), working
+under Hemayet Hossain's direction. This is an AI-tool role credit, not a
+separate GitHub account or an employment title.
+
 OpenAI Codex assisted with documentation drafting, evidence review, and
 implementation guidance. Hemayet Hossain reviewed the work and executed
 the Salesforce and Git operations.
